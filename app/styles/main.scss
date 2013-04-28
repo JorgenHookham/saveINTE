@@ -21,7 +21,9 @@
 
 // Different parts of the hero box
 .hero-box--title {}
-.hero-box--image {}
+.hero-box--image {
+    &[src="images/"] { display: none; } // Hide hero box images with no url
+}
 .hero-box--caption {}
 
 // § //

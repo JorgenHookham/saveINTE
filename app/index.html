@@ -24,10 +24,9 @@
       <script src="components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div class="container">
       <section class="hero-grid" ng-controller="heroGridController">
-        <article ng-repeat="hero in heroBoxes">
+        <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
           <h2 class="hero-box--title">{{ hero.title }}</h2>
           <img class="hero-box--image" src="images/{{ hero.imageUrl }}">
           <p class="hero-box--caption">{{ hero.caption }}</p>
