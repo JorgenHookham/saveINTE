@@ -11,6 +11,7 @@
 @import 'compass/css3/box-sizing';
 @import 'compass/css3/filter';
 @import 'compass/css3/opacity';
+@import 'compass/css3/text-shadow';
 @import 'compass/css3/transition';
 
 
@@ -44,6 +45,7 @@ img { max-width: 100%; }
 
 
 // A box in our grid of different types of content
+
 .hero-box {
     position: relative;
 
@@ -56,17 +58,38 @@ img { max-width: 100%; }
 
 
 // Different types of hero box
+
 .hero-box__photo {
     @extend .g-2x2;
 
     .hero-box--title    { top: 5px; bottom: auto !important; }
     .hero-box--caption  { @extend .hero-box--title; top: auto !important; bottom: 5px !important; }
 }
+
 .hero-box__text     { @extend .g-1x1; padding: 15px; }
-.hero-box__video    { @extend .g-2x2; }
+.hero-box__video {
+    @extend .g-2x2;
+
+    &:after {
+        content: 'Play Video';
+
+        position: absolute;
+        top: 5px; right: 5px; bottom: 5px; left: 5px;
+        z-index: 30;
+
+        display: block;
+
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+        line-height: 470px;
+        @include text-shadow(1px 1px 2px rgba(0, 0, 0, .68));
+    }
+}
 
 
 // Different parts of the hero box
+
 .hero-box--title {
     position: absolute;
     right: 5px; bottom: 5px; left: 5px;
@@ -78,8 +101,11 @@ img { max-width: 100%; }
 
     color: #fff;
 }
+
 .hero-box--image {
+    position: relative;
     z-index: 10;
+
     width: 100%; height: 100%;
     margin: 0;
 
@@ -88,10 +114,13 @@ img { max-width: 100%; }
 
     @include filter(saturate(24%));
 }
-.hero-box--vine-embed { @extend .hero-box--image; }
-.hero-box--youtube-embed { @extend .hero-box--image; }
 
-.hero-box--vine-embed, .hero-box--image, .hero-box--title { @include transition(all 250ms ease-in-out)}
+.hero-box--video { @extend .hero-box--image; }
+
+.hero-box--vine-embed       { @extend .hero-box--video; }
+.hero-box--youtube-embed    { @extend .hero-box--video; }
+
+.hero-box--vine-embed, .hero-box--image { @include transition(all 250ms ease-in-out)}
 
 
 // Different states of a hero box
@@ -100,7 +129,8 @@ img { max-width: 100%; }
     .hero-box--vine-embed, .hero-box--image { @include filter(saturate(100%)); }
 
     &.hero-box__video {
-        .hero-box--title { @include opacity(0); }
+        .hero-box--title    { display: none; }
+        &:after             { display: none; }
     }
 }
 

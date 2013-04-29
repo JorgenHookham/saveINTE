@@ -68,20 +68,20 @@ saveINTEapp.controller('heroGridController',
 
         $scope.vineBoxes = [
             {
-                title: 'Vine Clip',
+                title: 'Glitch Mob',
                 embedUrl: 'http://vine.co/v/b55LOA1dgJU/embed/simple',
                 type: 'video',
-                priority: 1,
+                priority: 5,
                 template: 'hero-box-templates/vine.html'
             }
         ];
 
         $scope.youtubeBoxes = [
             {
-                title: 'Youtube Clip',
+                title: 'Ride Never Stop',
                 embedUrl: 'http://www.youtube.com/embed/ydM2YqukXgo',
                 type: 'video',
-                priority: 5,
+                priority: 1,
                 template: 'hero-box-templates/youtube.html'
             }
         ];
