@@ -66,17 +66,27 @@ saveINTEapp.controller('heroGridController',
             }
         ];
 
-        $scope.videoBoxes = [
+        $scope.vineBoxes = [
             {
                 title: 'Vine Clip',
                 embedUrl: 'http://vine.co/v/b55LOA1dgJU/embed/simple',
                 type: 'video',
                 priority: 1,
-                template: 'hero-box-templates/video.html'
+                template: 'hero-box-templates/vine.html'
             }
         ];
 
-        var heroBoxes = [].concat($scope.textBoxes).concat($scope.photoBoxes).concat($scope.videoBoxes);
+        $scope.youtubeBoxes = [
+            {
+                title: 'Youtube Clip',
+                embedUrl: 'http://www.youtube.com/embed/ydM2YqukXgo',
+                type: 'video',
+                priority: 5,
+                template: 'hero-box-templates/youtube.html'
+            }
+        ];
+
+        var heroBoxes = [].concat($scope.textBoxes).concat($scope.photoBoxes).concat($scope.vineBoxes).concat($scope.youtubeBoxes);
         $scope.heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
 
 });

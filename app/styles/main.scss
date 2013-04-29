@@ -89,6 +89,7 @@ img { max-width: 100%; }
     @include filter(saturate(24%));
 }
 .hero-box--vine-embed { @extend .hero-box--image; }
+.hero-box--youtube-embed { @extend .hero-box--image; }
 
 .hero-box--vine-embed, .hero-box--image, .hero-box--title { @include transition(all 250ms ease-in-out)}
 
