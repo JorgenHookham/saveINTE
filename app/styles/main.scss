@@ -23,14 +23,14 @@ img { max-width: 100%; }
 
 // Grid system
 
-.g-1x1 { width: 25%; padding-bottom: 25%; }
-.g-2x2 { width: 50%; padding-bottom: 50%; }
-.g-2x1 { width: 50%; padding-bottom: 25%; }
+.g-1x1 { width: 24.88%; padding-bottom: 24.88%; margin: 0; }
+.g-2x2 { width: 49.88%; padding-bottom: 49.88%; margin: 0; }
+.g-2x1 { width: 49.88%; padding-bottom: 24.88%; margin: 0; }
 
 @media (max-width:600px) {
-    .g-1x1 { width: 50%; padding-bottom: 50%; }
-    .g-2x2 { width: 100%; padding-bottom: 100%; }
-    .g-2x1 { width: 100%; padding-bottom: 50%; }    
+    .g-1x1 { width: 49.88%; padding-bottom: 49.88%; }
+    .g-2x2 { width: 99.88%; padding-bottom: 99.88%; }
+    .g-2x1 { width: 99.88%; padding-bottom: 49.88%; }    
 }
 
 
