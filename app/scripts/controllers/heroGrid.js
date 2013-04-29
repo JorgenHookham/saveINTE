@@ -1,7 +1,7 @@
 'use strict';
 
 saveINTEapp.controller('heroGridController',
-    function heroGridController ($scope) {
+    function heroGridController ($scope, $http, $resource) {
 
         // Masonry
 
@@ -108,15 +108,24 @@ saveINTEapp.controller('heroGridController',
 
         var changeUrl = 'http://www.change.org/petitions/world-save-our-intes';
 
-        var requestUrl = 'https://api.change.org/v1/petitions/get_id';
+        var requestUrl = 'https://api.change.org/v1/petitions/1109576/signatures';
 
         var requestParameters = {
             'api_key'       : changeApiKey,
-            'request_url'   : requestUrl
+            'petition_id'   : 1109576
         };
+
+        // $http.defaults.useXDomain = true;
+
+        // var ChangeOrgPetition = JSON.parse($resource(requestUrl, requestParameters, { get: {method: 'JSONP'}}));
+        
+        // ChangeOrgPetition.get(function(data) {
+        //     console.log(data);
+        // });
 
         $.ajax({
             url: requestUrl,
+            dataType: 'jsonp',
             type: 'GET',
             data: requestParameters,
             success: function(data) {
@@ -129,11 +138,9 @@ saveINTEapp.controller('heroGridController',
 
 });
 
-saveINTEapp.directive('addMasonry', function($timeout) {
-  return {
-    restrict: 'A',
-    link: function($scope, element) {
-        $scope.heroGrid.masonry('reload');
-    }
-  };
-});
+
+
+
+
+
+
