@@ -1,22 +1,43 @@
-@import "compass_twitter_bootstrap";
+////////////////////////
+// saveINTE Hero Site //
+////////////////////////
 
-/* Will be compiled down to a single stylesheet with your sass files */
+
+@import 'compass_twitter_bootstrap';
+
+@import 'compass/css3/box-sizing';
+@import 'compass/css3/box-shadow';
+
+// Our sheet is s0000 stylish!
 
 
+img { max-width: 100%; }
+
+
+/////////////////////
+// The Hero Banner //
+/////////////////////
+
+.hero-banner {}
+
+
+
+
+///////////////////
+// The Hero Grid //
+///////////////////
+
+.hero-grid { width: 100%; }
 
 
 // A box in our grid of different types of content
-.hero-box {}
-
-
+.hero-box { padding: 15px; @include box-sizing('border-box'); @include box-shadow(0 0 0 5px #fff inset); background: #ddd; }
 
 
 // Different types of hero box
-.hero-box__photo {}
-.hero-box__text {}
-.hero-box__photo {}
-
-
+.hero-box__photo    { width: 470px; height: 470px; }
+.hero-box__text     { width: 235px; height: 235px; }
+.hero-box__video    { width: 470px; height: 470px; }
 
 
 // Different parts of the hero box

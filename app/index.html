@@ -9,7 +9,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="https://get.gridsetapp.com/19056/" rel="stylesheet" />
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -28,13 +28,15 @@
       <section class="hero-grid" ng-controller="heroGridController">
         <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
           <h2 class="hero-box--title">{{ hero.title }}</h2>
-          <img class="hero-box--image" src="images/{{ hero.imageUrl }}">
+          <img class="hero-box--image" src="images/{{ hero.imageUrl }}" add-masonry="hero">
           <p class="hero-box--caption">{{ hero.caption }}</p>
         </article>
       </section>
     </div>
 
     <script src="components/angular/angular.js"></script>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery-masonry/jquery.masonry.min.js"></script>
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
