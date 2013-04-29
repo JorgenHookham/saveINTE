@@ -42,9 +42,7 @@ img { max-width: 100%; }
 
 // Different parts of the hero box
 .hero-box--title {}
-.hero-box--image {
-    &[src="images/"] { display: none; } // Hide hero box images with no url
-}
+.hero-box--image {}
 .hero-box--caption {}
 
 // § //
