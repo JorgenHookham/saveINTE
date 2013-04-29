@@ -26,7 +26,9 @@
 
     <div class="container">
       <section class="hero-grid" ng-controller="heroGridController">
-        <article class="hero-box hero-box__{{ hero.type }}" ng-include src="hero.template" ng-repeat="hero in heroBoxes"></article>
+        <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
+          <div class="hero-box--inner" ng-include src="hero.template"></div>
+        </article>
       </section>
     </div>
 

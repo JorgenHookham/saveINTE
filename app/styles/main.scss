@@ -6,6 +6,7 @@
 // Imports
 
 @import 'compass_twitter_bootstrap';
+@import 'compass_twitter_bootstrap_responsive';
 
 @import 'compass/css3/box-shadow';
 @import 'compass/css3/box-sizing';
@@ -22,9 +23,15 @@ img { max-width: 100%; }
 
 // Grid system
 
-.g-1x1 { width: 235px; height: 235px; }
-.g-2x2 { width: 470px; height: 470px; }
-.g-2x1 { width: 470px; height: 235px; }
+.g-1x1 { width: 25%; padding-bottom: 25%; }
+.g-2x2 { width: 50%; padding-bottom: 50%; }
+.g-2x1 { width: 50%; padding-bottom: 25%; }
+
+@media (max-width:600px) {
+    .g-1x1 { width: 50%; padding-bottom: 50%; }
+    .g-2x2 { width: 100%; padding-bottom: 100%; }
+    .g-2x1 { width: 100%; padding-bottom: 50%; }    
+}
 
 
 
@@ -46,61 +53,30 @@ img { max-width: 100%; }
 
 // A box in our grid of different types of content
 
-.hero-box {
-    position: relative;
+.hero-box {}
 
-    @include box-sizing('border-box');
-    padding: 5px;
-
-    @include box-shadow(0 0 0 5px #fff inset);
-    background: #888;
-}
+.hero-box--inner { position: absolute; top: 5px; right: 5px; bottom: 5px; left: 5px; background: #B4D455; }
 
 
 // Different types of hero box
 
-.hero-box__photo {
-    @extend .g-2x2;
-
-    .hero-box--title    { top: 5px; bottom: auto !important; }
-    .hero-box--caption  { @extend .hero-box--title; top: auto !important; bottom: 5px !important; }
-}
-
-.hero-box__text     { @extend .g-1x1; padding: 15px; }
-.hero-box__video {
-    @extend .g-2x2;
-
-    &:after {
-        content: 'Play Video';
-
-        position: absolute;
-        top: 5px; right: 5px; bottom: 5px; left: 5px;
-        z-index: 30;
-
-        display: block;
-
-        color: #fff;
-        font-size: 24px;
-        text-align: center;
-        line-height: 470px;
-        @include text-shadow(1px 1px 2px rgba(0, 0, 0, .68));
-    }
-}
+.hero-box__photo    { @extend .g-2x2; }
+.hero-box__text     { @extend .g-1x1; }
+.hero-box__video    { @extend .g-2x2; }
 
 
 // Different parts of the hero box
 
 .hero-box--title {
     position: absolute;
-    right: 5px; bottom: 5px; left: 5px;
-    z-index: 20;
-
-    margin: 0; padding: 5px;
-
-    background-color: rgba(0, 0, 0, 0.32);
-
+    top:5px; right: 5px; left: 5px;
+    margin: 0;
+    padding: 5px;
     color: #fff;
+    @include text-shadow(1px 1px 2px rgba(0, 0, 0, 0.68));
 }
+
+.hero-box--caption { position: absolute; right: 5px; bottom: 5px; left: 5px; margin: 0; padding: 5px; }
 
 .hero-box--image {
     position: relative;
