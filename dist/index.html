@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link href="https://get.gridsetapp.com/19056/" rel="stylesheet">
-    <link rel="stylesheet" href="styles/3e86e3df.main.css">
+    <link rel="stylesheet" href="styles/890576cb.main.css">
   </head>
   <body ng-app="saveINTEapp">
     <!--[if lt IE 7]>
@@ -24,7 +24,9 @@
 
     <div class="container">
       <section class="hero-grid" ng-controller="heroGridController">
-        <article class="hero-box hero-box__{{ hero.type }}" ng-include="" src="hero.template" ng-repeat="hero in heroBoxes"></article>
+        <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
+          <div class="hero-box--inner" ng-include="" src="hero.template"></div>
+        </article>
       </section>
     </div>
 
