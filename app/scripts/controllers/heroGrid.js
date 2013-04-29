@@ -69,7 +69,7 @@ saveINTEapp.controller('heroGridController',
         $scope.videoBoxes = [
             {
                 title: 'Vine Clip',
-                caption: 'Support us in 6 seconds.',
+                embedUrl: 'http://vine.co/v/b55LOA1dgJU/embed/simple',
                 type: 'video',
                 priority: 1,
                 template: 'hero-box-templates/video.html'
@@ -85,7 +85,6 @@ saveINTEapp.directive('addMasonry', function($timeout) {
   return {
     restrict: 'A',
     link: function($scope, element) {
-        console.log('reload masonry');
         $scope.heroGrid.masonry('reload');
     }
   };

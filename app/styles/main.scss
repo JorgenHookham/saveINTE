@@ -3,15 +3,28 @@
 ////////////////////////
 
 
+// Imports
+
 @import 'compass_twitter_bootstrap';
 
-@import 'compass/css3/box-sizing';
 @import 'compass/css3/box-shadow';
+@import 'compass/css3/box-sizing';
+@import 'compass/css3/filter';
+@import 'compass/css3/opacity';
+@import 'compass/css3/transition';
 
-// Our sheet is s0000 stylish!
 
+// Base styles
 
 img { max-width: 100%; }
+
+
+// Grid system
+
+.g-1x1 { width: 235px; height: 235px; }
+.g-2x2 { width: 470px; height: 470px; }
+.g-2x1 { width: 470px; height: 235px; }
+
 
 
 /////////////////////
@@ -31,19 +44,64 @@ img { max-width: 100%; }
 
 
 // A box in our grid of different types of content
-.hero-box { padding: 15px; @include box-sizing('border-box'); @include box-shadow(0 0 0 5px #fff inset); background: #ddd; }
+.hero-box {
+    position: relative;
+
+    @include box-sizing('border-box');
+    padding: 5px;
+
+    @include box-shadow(0 0 0 5px #fff inset);
+    background: #888;
+}
 
 
 // Different types of hero box
-.hero-box__photo    { width: 470px; height: 470px; }
-.hero-box__text     { width: 235px; height: 235px; }
-.hero-box__video    { width: 470px; height: 470px; }
+.hero-box__photo {
+    @extend .g-2x2;
+
+    .hero-box--title    { top: 5px; bottom: auto !important; }
+    .hero-box--caption  { @extend .hero-box--title; top: auto !important; bottom: 5px !important; }
+}
+.hero-box__text     { @extend .g-1x1; padding: 15px; }
+.hero-box__video    { @extend .g-2x2; }
 
 
 // Different parts of the hero box
-.hero-box--title {}
-.hero-box--image {}
-.hero-box--caption {}
+.hero-box--title {
+    position: absolute;
+    right: 5px; bottom: 5px; left: 5px;
+    z-index: 20;
+
+    margin: 0; padding: 5px;
+
+    background-color: rgba(0, 0, 0, 0.32);
+
+    color: #fff;
+}
+.hero-box--image {
+    z-index: 10;
+    width: 100%; height: 100%;
+    margin: 0;
+
+    background-size: auto 100%;
+    background-position: 50% 50%;
+
+    @include filter(saturate(24%));
+}
+.hero-box--vine-embed { @extend .hero-box--image; }
+
+.hero-box--vine-embed, .hero-box--image, .hero-box--title { @include transition(all 250ms ease-in-out)}
+
+
+// Different states of a hero box
+
+.hero-box:hover {
+    .hero-box--vine-embed, .hero-box--image { @include filter(saturate(100%)); }
+
+    &.hero-box__video {
+        .hero-box--title { @include opacity(0); }
+    }
+}
 
 // § //
 
