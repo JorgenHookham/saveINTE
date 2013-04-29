@@ -3,6 +3,8 @@
 saveINTEapp.controller('heroGridController',
     function heroGridController ($scope) {
 
+        // Masonry
+
         $scope.heroGrid = $('.hero-grid');
         $scope.heroGrid.masonry({
             itemSelector: '.hero-box',
@@ -15,6 +17,8 @@ saveINTEapp.controller('heroGridController',
         $(window).ready(function () {
             $scope.heroGrid.masonry('reload');
         });
+
+        // Hero Grid Items (photos)
 
         $scope.photoBoxes = [
             {
@@ -34,6 +38,8 @@ saveINTEapp.controller('heroGridController',
                 template: 'hero-box-templates/photo.html'
             }
         ];
+
+        // Hero Grid Items (text)
 
         $scope.textBoxes = [
             {
@@ -66,6 +72,8 @@ saveINTEapp.controller('heroGridController',
             }
         ];
 
+        // Hero Grid Items (vine embeds)
+
         $scope.vineBoxes = [
             {
                 title: 'Glitch Mob',
@@ -75,6 +83,8 @@ saveINTEapp.controller('heroGridController',
                 template: 'hero-box-templates/vine.html'
             }
         ];
+
+        // Hero Grid Items (youtube embeds)
 
         $scope.youtubeBoxes = [
             {
@@ -86,8 +96,36 @@ saveINTEapp.controller('heroGridController',
             }
         ];
 
+        // Concatenating hero box sources and sorting
+
         var heroBoxes = [].concat($scope.textBoxes).concat($scope.photoBoxes).concat($scope.vineBoxes).concat($scope.youtubeBoxes);
         $scope.heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
+
+        // Change.org 
+
+        var changeApiKey    = 'eb4d16cccf1b537eb172cd1cbe60b396e5a8c3f15c7b1ef6630ebf39ba33b37f';
+        var changeApiSecret = '45399b53c636021368c7612d55149f5931ccbc206bae6683ce58798e04881a95';
+
+        var changeUrl = 'http://www.change.org/petitions/world-save-our-intes';
+
+        var requestUrl = 'https://api.change.org/v1/petitions/get_id';
+
+        var requestParameters = {
+            'api_key'       : changeApiKey,
+            'request_url'   : requestUrl
+        };
+
+        $.ajax({
+            url: requestUrl,
+            type: 'GET',
+            data: requestParameters,
+            success: function(data) {
+                console.log(data)
+            },
+            error: function(obj, status) {
+                console.log('Aw, shucks!');
+            }
+        });
 
 });
 
