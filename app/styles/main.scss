@@ -29,7 +29,7 @@ $proxima-stack: 'proxima-nova', 'helvetica neue', helvetica, sans-serif;
 // Base styles
 
 html { font-family: $proxima-stack; line-height: 1.5; }
-body { background: darken($dark-grey, 24%); }
+body {  }
 img { max-width: 100%; }
 
 h1, h2, h3, h4 { font-family: $proxima-stack; font-weight: 800; line-height: 0.875; text-transform: uppercase; }
@@ -57,7 +57,8 @@ h4 { font-weight: 300; }
 // The Hero Banner //
 /////////////////////
 
-.hero-banner {}
+.hero-banner        { padding-top: 20px; text-align: center; background-image: url(../images/pano-bg.png); }
+.hero-banner--pano  { height: 400px; width: 100%; margin: 0; }
 
 
 
@@ -66,7 +67,7 @@ h4 { font-weight: 300; }
 // The Hero Grid //
 ///////////////////
 
-.hero-grid { width: 100%; }
+.hero-grid { width: 100%; background: darken($dark-grey, 24%); padding: 5px 0; }
 
 
 // A box in our grid of different types of content
@@ -85,9 +86,12 @@ h4 { font-weight: 300; }
 
 // Different types of hero box
 
-.hero-box__photo    { @extend .g-2x2; }
 .hero-box__quote    { @extend .g-1x1; }
+.hero-box__photo    { @extend .g-2x2; }
 .hero-box__video    { @extend .g-2x2; }
+.hero-box__petition { @extend .g-2x1; text-align: center; }
+
+.hero-box__petition  > .hero-box--inner { background: $pink; }
 
 
 // Different parts of the hero box
@@ -100,6 +104,10 @@ h4 { font-weight: 300; }
     @include text-shadow(0 0 1px rgba(0, 0, 0, 0.32));
 }
 
+
+// Quote elements
+
+.hero-box--author { position: absolute; right: 20px; bottom: 20px; left: 20px; }
 .hero-box--quote {
     @extend .hero-box--title;
     top: 20px; right: 20px; left: 20px;
@@ -118,7 +126,8 @@ h4 { font-weight: 300; }
     }
 }
 
-.hero-box--caption { position: absolute; right: 5px; bottom: 5px; left: 5px; margin: 0; padding: 5px; }
+
+// Photo elements
 
 .hero-box--image {
     position: relative;
@@ -133,14 +142,31 @@ h4 { font-weight: 300; }
     @include filter(saturate(24%));
 }
 
-.hero-box--author { position: absolute; right: 20px; bottom: 20px; left: 20px; }
 
-.hero-box--video { @extend .hero-box--image; }
+// Video elements
 
+.hero-box--video            { @extend .hero-box--image; }
 .hero-box--vine-embed       { @extend .hero-box--video; }
 .hero-box--youtube-embed    { @extend .hero-box--video; }
 
 .hero-box--vine-embed, .hero-box--image { @include transition(all 250ms ease-in-out)}
+
+
+// Petition elements
+
+.hero-box--signatures{ font-size: 100px; margin-top: 20px; }
+.hero-box--sign {
+    margin-top: 20px;
+    padding: 10px;
+
+    border: none;
+    border-bottom: 5px solid darken($pink, 20%);
+    background: darken($pink, 10%);
+
+    font-family: $proxima-stack;
+    font-size: 20px;
+    color: #fff;
+}
 
 
 // Different states of a hero box
@@ -153,6 +179,14 @@ h4 { font-weight: 300; }
         &:after             { display: none; }
     }
 }
+
+
+
+/////////////////////
+// The Hero Footer //
+/////////////////////
+
+.hero-footer        { height: 400px; width: 100%; background-image: url(../images/pano-bg.png); }
 
 // § //
 

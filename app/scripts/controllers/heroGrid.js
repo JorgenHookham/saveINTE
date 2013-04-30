@@ -5,7 +5,7 @@ saveINTEapp.controller('heroGridController',
 
         // Masonry
 
-        $scope.heroGrid = $('.hero-grid');
+        $scope.heroGrid = $('.hero-grid--container');
         $scope.heroGrid.masonry({
             itemSelector: '.hero-box',
             columnWidth: function( containerWidth ) {
@@ -26,7 +26,7 @@ saveINTEapp.controller('heroGridController',
                 caption: 'The IDL program is too awesome.',
                 imageUrl: 'save-the-future.jpg',
                 type: 'photo',
-                priority: 2,
+                priority: 1,
                 template: 'hero-box-templates/photo.html'
             },
             {
@@ -47,7 +47,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'We push every one of them.',
                 credential: 'Huge Bigshot',
                 type: 'quote',
-                priority: 3,
+                priority: 4,
                 template: 'hero-box-templates/quote.html'
             },
             {
@@ -55,7 +55,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'Saturday morning cartoons!',
                 credential: 'Huge Bigshot',
                 type: 'quote',
-                priority: 3,
+                priority: 4,
                 template: 'hero-box-templates/quote.html'
             },
             {
@@ -71,7 +71,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'High priority content.',
                 credential: 'Huge Bigshot',
                 type: 'quote',
-                priority: 2,
+                priority: 3,
                 template: 'hero-box-templates/quote.html'
             }
         ];
@@ -95,22 +95,34 @@ saveINTEapp.controller('heroGridController',
                 title: 'Ride Never Stop',
                 embedUrl: 'http://www.youtube.com/embed/ydM2YqukXgo',
                 type: 'video',
-                priority: 1,
+                priority: 4,
                 template: 'hero-box-templates/youtube.html'
             }
         ];
 
+        $scope.petitionBox = {
+            signatures: 0,
+            type: 'petition',
+            template: 'hero-box-templates/petition.html'
+        }
+
         // Concatenating hero box sources and sorting
 
-        var heroBoxes = [].concat($scope.quoteBoxes).concat($scope.photoBoxes).concat($scope.vineBoxes).concat($scope.youtubeBoxes);
-        $scope.heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
+        var heroBoxes = []
+            .concat($scope.quoteBoxes)
+            .concat($scope.photoBoxes)
+            .concat($scope.vineBoxes)
+            .concat($scope.youtubeBoxes);
+
+        heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
+        heroBoxes.splice(3, 0, $scope.petitionBox);
+
+        $scope.heroBoxes = heroBoxes;
 
         // Change.org 
 
         var changeApiKey    = 'eb4d16cccf1b537eb172cd1cbe60b396e5a8c3f15c7b1ef6630ebf39ba33b37f';
         var changeApiSecret = '45399b53c636021368c7612d55149f5931ccbc206bae6683ce58798e04881a95';
-
-        var changeUrl = 'http://www.change.org/petitions/world-save-our-intes';
 
         var requestUrl = 'https://api.change.org/v1/petitions/1109576/signatures';
 
@@ -133,7 +145,10 @@ saveINTEapp.controller('heroGridController',
             type: 'GET',
             data: requestParameters,
             success: function(data) {
-                console.log(data)
+                console.log($scope.petitionBox.signatures);
+                $scope.petitionBox.signatures = data.signatures.length;
+                window.the_thing = $scope.petitionBox;
+                console.log($scope.petitionBox.signatures);
             },
             error: function(obj, status) {
                 console.log('Aw, shucks!');
