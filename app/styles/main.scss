@@ -57,8 +57,14 @@ h4 { font-weight: 300; }
 // The Hero Banner //
 /////////////////////
 
-.hero-banner        { padding-top: 20px; text-align: center; background-image: url(../images/pano-bg.png); }
-.hero-banner--pano  { height: 400px; width: 100%; margin: 0; }
+.hero-banner {
+    height: 560px;
+    background-image: url(../images/pano.jpg);
+    border: 4px solid #fff;
+    border-left: 0;
+    border-right: 0;
+}
+.hero-banner--logo  { width: 571px; height: 433px; margin: 55px auto; background-image: url(../images/logo.png); font-size: 0; }
 
 
 
@@ -139,7 +145,7 @@ h4 { font-weight: 300; }
     background-size: auto 100%;
     background-position: 50% 50%;
 
-    @include filter(saturate(24%));
+    @include filter(saturate(0%));
 }
 
 
@@ -179,14 +185,6 @@ h4 { font-weight: 300; }
         &:after             { display: none; }
     }
 }
-
-
-
-/////////////////////
-// The Hero Footer //
-/////////////////////
-
-.hero-footer        { height: 400px; width: 100%; background-image: url(../images/pano-bg.png); }
 
 // § //
 
