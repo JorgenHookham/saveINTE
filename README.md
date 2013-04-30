@@ -1,5 +1,18 @@
 # saveINTE Hero Page
 
+## Version 0.2
+April 30, 2013
+
+### New today
+
+- Integration with Change.org's API
+- Style system based on mockups
+
+### Things to Build Next
+
+- The responsive grid items need work at smaller sizes
+- The banner doesn't respond very well at smaller width's either
+
 ## Version 0.1
 April 29, 2013
 
