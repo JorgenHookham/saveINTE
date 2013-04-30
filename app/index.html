@@ -32,6 +32,14 @@
 
     <section class="hero-grid" ng-controller="heroGridController">
       <div class="container hero-grid--container">
+
+        <article class="hero-box hero-box__petition" ng-controller="petitionController">
+          <div class="hero-box--inner">
+            <h1 class="hero-box--signatures" ng-get-signatures>{{ signatures }} Signatures</h1>
+            <a href="http://www.change.org/en-CA/petitions/world-save-our-intes" class="hero-box--sign">Sign The Petition</a>
+          </div>
+        </article>
+
         <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
           <div class="hero-box--inner" ng-include src="hero.template"></div>
         </article>
@@ -50,6 +58,7 @@
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/heroGrid.js"></script>
+    <script src="scripts/controllers/petition.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

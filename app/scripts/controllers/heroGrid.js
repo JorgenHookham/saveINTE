@@ -1,7 +1,7 @@
 'use strict';
 
 saveINTEapp.controller('heroGridController',
-    function heroGridController ($scope, $http, $resource) {
+    function heroGridController ($scope) {
 
         // Masonry
 
@@ -26,7 +26,7 @@ saveINTEapp.controller('heroGridController',
                 caption: 'The IDL program is too awesome.',
                 imageUrl: 'save-the-future.jpg',
                 type: 'photo',
-                priority: 1,
+                priority: 2,
                 template: 'hero-box-templates/photo.html'
             },
             {
@@ -34,7 +34,7 @@ saveINTEapp.controller('heroGridController',
                 caption: 'A Weekend at the familiar AR209 to save the program that helped make us.',
                 imageUrl: 'back-at-the-lab.jpg',
                 type: 'photo',
-                priority: 3,
+                priority: 2,
                 template: 'hero-box-templates/photo.html'
             }
         ];
@@ -63,7 +63,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'Almost out of hand.',
                 credential: 'Huge Bigshot',
                 type: 'quote',
-                priority: 2,
+                priority: 1,
                 template: 'hero-box-templates/quote.html'
             },
             {
@@ -71,7 +71,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'High priority content.',
                 credential: 'Huge Bigshot',
                 type: 'quote',
-                priority: 3,
+                priority: 1,
                 template: 'hero-box-templates/quote.html'
             }
         ];
@@ -100,12 +100,6 @@ saveINTEapp.controller('heroGridController',
             }
         ];
 
-        $scope.petitionBox = {
-            signatures: 0,
-            type: 'petition',
-            template: 'hero-box-templates/petition.html'
-        }
-
         // Concatenating hero box sources and sorting
 
         var heroBoxes = []
@@ -114,46 +108,7 @@ saveINTEapp.controller('heroGridController',
             .concat($scope.vineBoxes)
             .concat($scope.youtubeBoxes);
 
-        heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
-        heroBoxes.splice(3, 0, $scope.petitionBox);
-
-        $scope.heroBoxes = heroBoxes;
-
-        // Change.org 
-
-        var changeApiKey    = 'eb4d16cccf1b537eb172cd1cbe60b396e5a8c3f15c7b1ef6630ebf39ba33b37f';
-        var changeApiSecret = '45399b53c636021368c7612d55149f5931ccbc206bae6683ce58798e04881a95';
-
-        var requestUrl = 'https://api.change.org/v1/petitions/1109576/signatures';
-
-        var requestParameters = {
-            'api_key'       : changeApiKey,
-            'petition_id'   : 1109576
-        };
-
-        // $http.defaults.useXDomain = true;
-
-        // var ChangeOrgPetition = JSON.parse($resource(requestUrl, requestParameters, { get: {method: 'JSONP'}}));
-        
-        // ChangeOrgPetition.get(function(data) {
-        //     console.log(data);
-        // });
-
-        $.ajax({
-            url: requestUrl,
-            dataType: 'jsonp',
-            type: 'GET',
-            data: requestParameters,
-            success: function(data) {
-                console.log($scope.petitionBox.signatures);
-                $scope.petitionBox.signatures = data.signatures.length;
-                window.the_thing = $scope.petitionBox;
-                console.log($scope.petitionBox.signatures);
-            },
-            error: function(obj, status) {
-                console.log('Aw, shucks!');
-            }
-        });
+        $scope.heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
 
 });
 

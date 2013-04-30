@@ -1,3 +1,3 @@
 'use strict';
 
-var saveINTEapp = angular.module('saveINTEapp', ['ngResource']);
+var saveINTEapp = angular.module('saveINTEapp', []);
