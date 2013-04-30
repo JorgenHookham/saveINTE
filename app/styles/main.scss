@@ -16,9 +16,23 @@
 @import 'compass/css3/transition';
 
 
+// Variables
+
+$pink: rgb(240, 32, 81);
+$dark-grey: rgb(103, 103, 103);
+$off-white: rgb(225, 222, 211);
+
+$proxima-stack: 'proxima-nova', 'helvetica neue', helvetica, sans-serif;
+
+
+
 // Base styles
 
+html { font-family: $proxima-stack; line-height: 1.5; }
+body { background: darken($dark-grey, 24%); }
 img { max-width: 100%; }
+
+h1, h2 { font-weight: 900; line-height: 0.875; }
 
 
 // Grid system
@@ -55,7 +69,14 @@ img { max-width: 100%; }
 
 .hero-box {}
 
-.hero-box--inner { position: absolute; top: 5px; right: 5px; bottom: 5px; left: 5px; background: #B4D455; }
+.hero-box--inner {
+    position: absolute;
+    top: 5px; right: 5px; bottom: 5px; left: 5px;
+
+    background: $dark-grey;
+}
+
+.hero-box:nth-child(3n) > .hero-box--inner { background: $pink; }
 
 
 // Different types of hero box
@@ -73,7 +94,7 @@ img { max-width: 100%; }
     margin: 0;
     padding: 5px;
     color: #fff;
-    @include text-shadow(1px 1px 2px rgba(0, 0, 0, 0.68));
+    @include text-shadow(0 0 1px rgba(0, 0, 0, 0.32));
 }
 
 .hero-box--caption { position: absolute; right: 5px; bottom: 5px; left: 5px; margin: 0; padding: 5px; }

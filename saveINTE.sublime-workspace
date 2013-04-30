@@ -519,14 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 30,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Test Javascript: Single File",
 	"command_palette":
@@ -580,11 +572,11 @@
 	},
 	"file_history":
 	[
-		"/Volumes/Data/git/saveINTE/app/views/heroBox.html",
 		"/Volumes/Data/git/saveINTE/README.md",
+		"/Volumes/Data/git/saveINTE/.gitignore",
+		"/Volumes/Data/git/saveINTE/app/views/heroBox.html",
 		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
 		"/Volumes/Data/git/saveINTE/app/hero-boxes/save-the-future.txt",
-		"/Volumes/Data/git/saveINTE/.gitignore",
 		"/Volumes/Data/git/water-sched/component.json",
 		"/Volumes/Data/git/water-sched/package.json",
 		"/Volumes/Data/git/saveINTE/README",
@@ -1126,35 +1118,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": ".gitignore",
-					"settings":
-					{
-						"buffer_size": 30,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
