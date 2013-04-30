@@ -39,36 +39,40 @@ saveINTEapp.controller('heroGridController',
             }
         ];
 
-        // Hero Grid Items (text)
+        // Hero Grid Items (quote)
 
-        $scope.textBoxes = [
+        $scope.quoteBoxes = [
             {
-                title: 'All The Channels',
-                caption: 'We push every one of them.',
-                type: 'text',
+                quote: 'All The Channels',
+                author: 'We push every one of them.',
+                credential: 'Huge Bigshot',
+                type: 'quote',
                 priority: 3,
-                template: 'hero-box-templates/text.html'
+                template: 'hero-box-templates/quote.html'
             },
             {
-                title: 'Back to the lab!',
-                caption: 'Saturday morning cartoons!',
-                type: 'text',
+                quote: 'Back to the lab!',
+                author: 'Saturday morning cartoons!',
+                credential: 'Huge Bigshot',
+                type: 'quote',
                 priority: 3,
-                template: 'hero-box-templates/text.html'
+                template: 'hero-box-templates/quote.html'
             },
             {
-                title: 'An Excess of Support',
-                caption: 'Almost out of hand.',
-                type: 'text',
+                quote: 'An Excess of Support',
+                author: 'Almost out of hand.',
+                credential: 'Huge Bigshot',
+                type: 'quote',
                 priority: 2,
-                template: 'hero-box-templates/text.html'
+                template: 'hero-box-templates/quote.html'
             },
             {
-                title: 'Top Dog',
-                caption: 'High priority content.',
-                type: 'text',
+                quote: 'Top Dog',
+                author: 'High priority content.',
+                credential: 'Huge Bigshot',
+                type: 'quote',
                 priority: 2,
-                template: 'hero-box-templates/text.html'
+                template: 'hero-box-templates/quote.html'
             }
         ];
 
@@ -98,7 +102,7 @@ saveINTEapp.controller('heroGridController',
 
         // Concatenating hero box sources and sorting
 
-        var heroBoxes = [].concat($scope.textBoxes).concat($scope.photoBoxes).concat($scope.vineBoxes).concat($scope.youtubeBoxes);
+        var heroBoxes = [].concat($scope.quoteBoxes).concat($scope.photoBoxes).concat($scope.vineBoxes).concat($scope.youtubeBoxes);
         $scope.heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
 
         // Change.org 
