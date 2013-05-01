@@ -290,11 +290,40 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 .engage--thing          { position: relative; display: block; width: 25%; padding-bottom: 25%; float: left; }
 .engage--thing,
 .engage--thing:hover    { color: #fff; text-decoration: none; }
-.engage--thing--inner   { position: absolute; top: 20px; right: 20px; bottom: 20px; left: 20px; background: $pink; }
-.engage--thing--icon    {  }
+.engage--thing--inner   { position: absolute; top: 20px; right: 20px; bottom: 20px; left: 20px; padding: 5px; background: $pink; overflow: hidden; }
+.engage--thing--icon    { display: block; width: 100px; height: 100px; margin: 0 auto; }
 .engage--thing--head    {  }
 .engage--thing--note    {  }
+
+.engage--thing__twitter {
+    @extend .engage--thing;
+
+    .engage--thing--icon { background-image: url(../images/engage--twitter.png); }
+}
+
+.engage--thing__facebook {
+    @extend .engage--thing;
+
+    .engage--thing--icon { background-image: url(../images/engage--facebook.png); }
+}
+
+.engage--thing__instagram {
+    @extend .engage--thing;
+
+    .engage--thing--icon { background-image: url(../images/engage--instagram.png); }
+}
+
+.engage--thing__vine {
+    @extend .engage--thing;
+
+    .engage--thing--icon { background-image: url(../images/engage--vine.png); }
+}
+
 .engage--hashtag        { margin: 40px 0 40px; font-weight: 300; color: #fff; }
+
+@media (min-width: 1200px) {
+    .engage--thing--inner { padding: 40px 5px; }
+}
 
 @media (max-width: 768px) {
     .engage--thing          { width: 50%; padding-bottom: 50%; }
