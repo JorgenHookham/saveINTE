@@ -52,6 +52,27 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
     &:before    { content: ''; display: table; }
 }
 
+.button,
+.button:hover {
+    display: block;
+
+    background: $pink;
+    border-bottom: 4px solid darken($pink, 12%);
+
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+
+.big-button,
+.big-button:hover { @extend .button; padding: 50px 20px; border-bottom: 12px solid darken($pink, 12%); font-size: 24px; }
+
+@media (max-width: 480px) {
+    .big-button,
+    .big-button:hover { padding: 20px 10px; }
+}
+
 
 // Grid system
 
@@ -112,21 +133,7 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 .hero-cta { width: 80%; max-width: 560px; margin: 70px auto; color: #fff; }
 .hero-cta--the-message { font-size: 30px; line-height: 36px; }
-.hero-cta--the-button,
-.hero-cta--the-button:hover {
-    display: block;
-    padding: 50px 20px;
-    margin-top: 40px;
-
-    background: $pink;
-    border-bottom: 12px solid darken($pink, 12%);
-
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 24px;
-    text-decoration: none;
-}
+.hero-cta--the-button { @extend .big-button; margin-top: 40px; }
 
 @media (max-width: 600px) {
     .hero-cta--the-message { font-size: 20px; line-height: 26px; }
@@ -134,8 +141,6 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 @media (max-width: 480px) {
     .hero-cta { margin: 40px auto 70px; }
-    .hero-cta--the-button,
-    .hero-cta--the-button:hover { padding: 20px 10px; }
 }
 
 
@@ -185,9 +190,7 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 .hero-box__quote    { @extend .g-1x1; }
 .hero-box__photo    { @extend .g-2x2; }
 .hero-box__video    { @extend .g-2x2; }
-.hero-box__petition { @extend .g-2x1; text-align: center; }
-
-.hero-box__petition  > .hero-box--inner { background: $pink; }
+.hero-box__petition { @extend .g-2x2; text-align: center; }
 
 
 // Different parts of the hero box
@@ -250,22 +253,11 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 // Petition elements
 
-.hero-box--signatures { margin-top: 20px; }
+.hero-box--signature-count  { font-size: 200px; }
+.hero-box--signatures       { font-size: 60px; }
+.hero-box--and-counting     { font-size: 30px; }
 .hero-box--sign,
-.hero-box--sign:hover {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px;
-
-    border: none;
-    border-bottom: 5px solid darken($pink, 20%);
-    background: darken($pink, 10%);
-
-    font-family: $proxima-stack;
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff;
-}
+.hero-box--sign:hover       { @extend .big-button; width: 80%; margin: 40px auto 0; }
 
 
 // Different states of a hero box
@@ -277,6 +269,38 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
         .hero-box--title    { display: none; }
         &:after             { display: none; }
     }
+}
+
+@media (max-width: 1200px) {
+    .hero-box--signature-count  { font-size: 160px; }
+    .hero-box--signatures       { font-size: 40px; }
+    .hero-box--and-counting     { font-size: 20px; }
+}
+
+@media (max-width: 979px) {
+    .hero-box--signature-count  { font-size: 120px; }
+    .hero-box--signatures       { font-size: 30px; }
+    .hero-box--and-counting     { font-size: 16px; }
+    .hero-box--sign,
+    .hero-box--sign:hover       { padding: 30px 15px; margin-top: 20px; }
+}
+
+@media (max-width: 768px) {
+    .hero-box--signature-count  { font-size: 68px; }
+    .hero-box--sign,
+    .hero-box--sign:hover       { padding: 15px 10px; font-size: 16px; }
+}
+
+@media (max-width: 600px) {
+    .hero-box--signature-count  { font-size: 200px; }
+    .hero-box--signatures       { font-size: 60px; }
+    .hero-box--and-counting     { font-size: 30px; }
+}
+
+@media (max-width: 525px) {
+    .hero-box--signature-count  { font-size: 120px; }
+    .hero-box--signatures       { font-size: 40px; }
+    .hero-box--and-counting     { font-size: 20px; }
 }
 
 

@@ -8,7 +8,7 @@ saveINTEapp.controller('petitionController',
         var changeApiKey    = 'e10d95d6a68b009a613ddcdc1eda7fbc83c639d1ca662a4003bd6f9972d47a88';
 
         var requestUrl = 'https://api.change.org/v1/petitions/get_id';
-        var petitionUrl = 'http://www.change.org/en-CA/petitions/capilano-university-save-the-interactive-design-program';
+        var petitionUrl = 'https://www.change.org/en-CA/petitions/capilano-university-save-the-interactive-design-program';
 
         var requestParameters = {
             'api_key'       : changeApiKey,
