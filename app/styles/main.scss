@@ -32,11 +32,13 @@ html { font-family: $proxima-stack; line-height: 1.5; }
 body { background: darken($dark-grey, 24%); font-family: $proxima-stack; }
 img { max-width: 100%; }
 
-h1, h2, h3, h4 { font-family: $proxima-stack; font-weight: 800; line-height: 0.875; text-transform: uppercase; }
+h1, h2, h3, h4 { font-family: $proxima-stack; font-weight: 800; line-height: 1; text-transform: uppercase; }
 
-h3 { font-weight: 600; }
+h2 { font-size: 24px; }
 
-h4 { font-weight: 300; }
+h3 { font-size: 18px; font-weight: 600; }
+
+h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 p { font-family: $proxima-stack; }
 
@@ -57,10 +59,23 @@ p { font-family: $proxima-stack; }
 .g-2x2 { width: 49.88%; padding-bottom: 49.88%; margin: 0; }
 .g-2x1 { width: 49.88%; padding-bottom: 24.88%; margin: 0; }
 
-@media (max-width:600px) {
+@media (max-width: 979px) {
+    .g-1x1 { width: 49.88%; padding-bottom: 24.88%; }
+}
+
+@media (max-width: 800px) {
+    .g-1x1 { width: 49.88%; padding-bottom: 49.88%; }
+    .g-2x1 { width: 49.88%; padding-bottom: 49.88%; }
+}
+
+@media (max-width: 600px) {
     .g-1x1 { width: 49.88%; padding-bottom: 49.88%; }
     .g-2x2 { width: 99.88%; padding-bottom: 99.88%; }
     .g-2x1 { width: 99.88%; padding-bottom: 49.88%; }    
+}
+
+@media (max-width: 460px) {
+    .g-1x1 { width: 99.88%; padding-bottom: 49.88%; }
 }
 
 
@@ -139,7 +154,7 @@ p { font-family: $proxima-stack; }
 
 .hero-box--title {
     position: absolute;
-    top:5px; right: 5px; left: 5px;
+    top: 5px; right: 5px; left: 5px;
     margin: 0;
     padding: 5px;
     @include text-shadow(0 0 1px rgba(0, 0, 0, 0.32));
@@ -148,16 +163,16 @@ p { font-family: $proxima-stack; }
 
 // Quote elements
 
-.hero-box--author { position: absolute; right: 20px; bottom: 20px; left: 20px; }
+.hero-box--author { position: absolute; right: 16px; bottom: 10px; left: 16px; }
 .hero-box--quote {
     @extend .hero-box--title;
-    top: 20px; right: 20px; left: 20px;
+    top: 10px; right: 16px; left: 16px;
 
     &:before {
         content: '“';
         display: block;
         position: absolute;
-        left: -10px;
+        left: -7px;
         font-weight: 600;
     }
 
@@ -241,12 +256,9 @@ p { font-family: $proxima-stack; }
 .engage--thing--note    {  }
 .engage--hashtag        { margin: 40px 0 40px; font-weight: 300; color: #fff; }
 
-@media (max-width: 842px) {
-    .engage--thing { width: 33.333333333%; }
-}
-
-@media (max-width: 480px) {
-    .engage--thing { width: 50%; }
+@media (max-width: 768px) {
+    .engage--thing          { width: 50%; padding-bottom: 50%; }
+    .engage--thing--inner   { top: 10px; right: 10px; bottom: 10px; left: 10px; }
 }
 
 
