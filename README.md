@@ -1,5 +1,26 @@
 # saveINTE Hero Page
 
+## Version 0.3
+May 1, 2013
+
+This was a big day for development! The Facebook group was buzzing and many things came together.
+Based on Daryl's work in mockups, the repo has been updated quite a bit.
+The responsiveness of the grid and all of the other site elements are also looking much better after today.
+As always there is a [live version](http://saveinte.bytheweb.co) to check out.
+
+Integrating with the change.org petition has been an issue today. The API was forbidding access
+to Matt's petition, and that issue persisted longer than I did tonight.
+
+In my mind the biggest issue that we're facing right now is content, but maybe I'm missing something.
+Hopefully we can figure that out tomorrow.
+
+If we're going to clone this site for the "My Cap Is..." campaign, we'll probably need to create a basic
+CMS so that others can curate their own content. Aside from that, putting together a separate visual
+identity is probably good idea—maybe blue/green instead of pink?
+
+We should be live at saveinte.ca any minute now. Everything is set up and triple checked, but it still
+returned an empty page by the time I went to bed.
+
 ## Version 0.2
 April 30, 2013
 
