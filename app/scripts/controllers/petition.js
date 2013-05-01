@@ -21,10 +21,10 @@ saveINTEapp.controller('petitionController',
             type: 'GET',
             data: requestParameters,
             success: function(data) {
-                $scope.$apply(function(){
-                    console.log(data);
-                    $scope.signatures = data.signatures.length;
-                });
+                console.log(data);
+                // $scope.$apply(function(){
+                //     $scope.signatures = data.signatures.length;
+                // });
             }
         });
 
