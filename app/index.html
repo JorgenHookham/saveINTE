@@ -30,13 +30,24 @@
       <h1 class="hero-banner--logo">saveINTE</h1>
     </section>
 
+    <section class="hero-cta">
+      <p class="hero-cta--the-message">
+        Capilano University’s Interactive Design program trains students
+        to be designers and developers to fulfill the demand in the robust
+        web industry in Vancouver. Interactive Design is scheduled to be
+        suspended, the board of governors are voting on whether or not to
+        discontinue the program on May 14.
+      </p>
+      <a class="hero-cta--the-button" href="https://www.change.org/en-CA/petitions/capilano-university-save-the-interactive-design-program#share">Sign The Petition.</a>
+    </section>
+
     <section class="hero-grid" ng-controller="heroGridController">
       <div class="container hero-grid--container">
 
         <article class="hero-box hero-box__petition" ng-controller="petitionController">
           <div class="hero-box--inner">
             <h1 class="hero-box--signatures" ng-get-signatures>{{ signatures }} Signatures</h1>
-            <a href="http://www.change.org/en-CA/petitions/world-save-our-intes" class="hero-box--sign">Sign The Petition</a>
+            <a class="hero-box--sign" href="https://www.change.org/en-CA/petitions/capilano-university-save-the-interactive-design-program#share">Sign The Petition</a>
           </div>
         </article>
 
@@ -46,8 +57,44 @@
       </div>
     </section>
 
-    <footer class="hero-footer">
-      <!-- // -->
+    <section class="engage">
+      <div class="clearfix">
+        <div class="engage--thing">
+          <i class="engage--thing--icon"></i>
+          <h3 class="engage--thing--head">Email</h3>
+          <p class="engage--thing--note">Instructions ipsum donec sed odio dui.</p>
+        </div>
+        <div class="engage--thing">
+          <i class="engage--thing--icon"></i>
+          <h3 class="engage--thing--head">Tweet It</h3>
+          <p class="engage--thing--note">Instructions ipsum donec sed odio dui.</p>
+        </div>
+        <div class="engage--thing">
+          <i class="engage--thing--icon"></i>
+          <h3 class="engage--thing--head">Facebook</h3>
+          <p class="engage--thing--note">Instructions ipsum donec sed odio dui.</p>
+        </div>
+        <div class="engage--thing">
+          <i class="engage--thing--icon"></i>
+          <h3 class="engage--thing--head">Vine</h3>
+          <p class="engage--thing--note">Instructions ipsum donec sed odio dui.</p>
+        </div>
+        <div class="engage--thing">
+          <i class="engage--thing--icon"></i>
+          <h3 class="engage--thing--head">Instagram</h3>
+          <p class="engage--thing--note">Instructions ipsum donec sed odio dui.</p>
+        </div>
+        <div class="engage--thing">
+          <i class="engage--thing--icon"></i>
+          <h3 class="engage--thing--head">Write A Letter</h3>
+          <p class="engage--thing--note">Instructions ipsum donec sed odio dui.</p>
+        </div>
+      </div>
+      <h1 class="engage--hashtag">#saveINTE</h1>
+    </section>
+
+    <footer class="contact-footer">
+      <a class="contact-footer--address" href="mailto:now@saveinte.ca">Contact us: now@saveinte.ca</a>
     </footer>
 
     <script src="components/angular/angular.js"></script>

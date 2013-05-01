@@ -29,7 +29,7 @@ $proxima-stack: 'proxima-nova', 'helvetica neue', helvetica, sans-serif;
 // Base styles
 
 html { font-family: $proxima-stack; line-height: 1.5; }
-body {  }
+body { background: darken($dark-grey, 24%); }
 img { max-width: 100%; }
 
 h1, h2, h3, h4 { font-family: $proxima-stack; font-weight: 800; line-height: 0.875; text-transform: uppercase; }
@@ -37,6 +37,16 @@ h1, h2, h3, h4 { font-family: $proxima-stack; font-weight: 800; line-height: 0.8
 h3 { font-weight: 600; }
 
 h4 { font-weight: 300; }
+
+
+// Utilities
+
+.clearfix {
+    zoom: 1;
+
+    &:after     { content: ''; display: table; clear: both; }
+    &:before    { content: ''; display: table; }
+}
 
 
 // Grid system
@@ -58,13 +68,35 @@ h4 { font-weight: 300; }
 /////////////////////
 
 .hero-banner {
-    height: 560px;
+    height: 290px;
+    padding: 35px 0;
     background-image: url(../images/pano.jpg);
-    border: 4px solid #fff;
-    border-left: 0;
-    border-right: 0;
 }
-.hero-banner--logo  { width: 571px; height: 433px; margin: 55px auto; background-image: url(../images/logo.png); font-size: 0; }
+.hero-banner--logo  { width: 385px; height: 290px; margin: 0 auto; background-image: url(../images/logo.png); font-size: 0; }
+
+
+
+
+/////////////////
+// The Message //
+/////////////////
+
+.hero-cta { width: 80%; max-width: 560px; margin: 70px auto; color: #fff; }
+.hero-cta--the-message { font-size: 30px; line-height: 36px; margin-bottom: 40px; }
+.hero-cta--the-button,
+.hero-cta--the-button:hover {
+    display: block;
+    padding: 50px 20px;
+
+    background: $pink;
+    border-bottom: 12px solid darken($pink, 12%);
+
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+}
 
 
 
@@ -73,7 +105,7 @@ h4 { font-weight: 300; }
 // The Hero Grid //
 ///////////////////
 
-.hero-grid { width: 100%; background: darken($dark-grey, 24%); padding: 5px 0; }
+.hero-grid { width: 100%; padding: 5px 0; margin-bottom: 45px; }
 
 
 // A box in our grid of different types of content
@@ -188,6 +220,39 @@ h4 { font-weight: 300; }
         &:after             { display: none; }
     }
 }
+
+
+
+
+////////////////////
+// Engage Section //
+////////////////////
+
+.engage                 { @extend .clearfix; background: $pink; color: #fff; text-align: center; }
+.engage--thing          { @include box-sizing('border-box'); width: 16.666666667%; float: left; padding: 20px; }
+.engage--thing--icon    {}
+.engage--thing--head    {}
+.engage--thing--note    {}
+.engage--hashtag        { margin: 20px 0 40px; font-weight: 300; }
+
+@media (max-width: 842px) {
+    .engage--thing { width: 33.333333333%; }
+}
+
+@media (max-width: 480px) {
+    .engage--thing { width: 50%; }
+}
+
+
+
+
+////////////
+// Footer //
+////////////
+
+.contact-footer { text-align: center; padding: 80px 0 240px; }
+.contact-footer--address,
+.contact-footer--address:hover { color: #fff; text-decoration: none; font-size: 24px; }
 
 // § //
 

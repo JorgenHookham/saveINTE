@@ -4,8 +4,36 @@
 		"selected_items":
 		[
 			[
+				"cha",
+				"ChangeOrgPetition"
+			],
+			[
+				"re",
+				"requestUrl"
+			],
+			[
+				"dar",
+				"darken"
+			],
+			[
+				"petition",
+				"petitionBox"
+			],
+			[
+				"pe",
+				"petitionSignatures"
+			],
+			[
+				"hero",
+				"heroBoxes"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
 				"her",
-				"hero-box"
+				"hero-box--inner"
 			],
 			[
 				"c",
@@ -122,10 +150,6 @@
 			[
 				"init",
 				"initial_height"
-			],
-			[
-				"re",
-				"revealer--show"
 			],
 			[
 				"templ",
@@ -360,10 +384,6 @@
 				"MemberCareerRelation"
 			],
 			[
-				"font-",
-				"font-family"
-			],
-			[
 				"pro",
 				"prototype"
 			],
@@ -494,26 +514,6 @@
 			[
 				"current",
 				"current_progress_counter"
-			],
-			[
-				"lo",
-				"loading_message"
-			],
-			[
-				"padding-",
-				"padding-bottom"
-			],
-			[
-				"padding",
-				"padding-bottom"
-			],
-			[
-				"about",
-				"about-section-title"
-			],
-			[
-				"about-sectio",
-				"about-section-description"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 	"build_system": "Test Javascript: Single File",
 	"command_palette":
 	{
-		"height": 349.0,
+		"height": 375.0,
 		"selected_items":
 		[
 			[
@@ -572,10 +572,19 @@
 	},
 	"file_history":
 	[
+		"/Volumes/Data/git/saveINTE/app/index.html",
 		"/Volumes/Data/git/saveINTE/README.md",
+		"/Volumes/Data/git/saveINTE/app/hero-box-templates/quote.html",
+		"/Volumes/Data/git/saveINTE/app/hero-box-templates/photo.html",
+		"/Volumes/Data/git/saveINTE/app/scripts/controllers/heroGrid.js",
+		"/Volumes/Data/git/saveINTE/app/scripts/app.js",
+		"/Volumes/Data/git/saveINTE/app/scripts/controllers/petition.js",
+		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
+		"/Volumes/Data/git/saveINTE/app/hero-box-templates/petition.html",
+		"/Volumes/Data/git/saveINTE/app/images/pano",
+		"/Volumes/Data/git/saveINTE/.tmp/styles/main.css",
 		"/Volumes/Data/git/saveINTE/.gitignore",
 		"/Volumes/Data/git/saveINTE/app/views/heroBox.html",
-		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
 		"/Volumes/Data/git/saveINTE/app/hero-boxes/save-the-future.txt",
 		"/Volumes/Data/git/water-sched/component.json",
 		"/Volumes/Data/git/water-sched/package.json",
@@ -690,16 +699,7 @@
 		"/Volumes/Data/git/sokanu/site/djangoproject/career_profile/urls.py",
 		"/Volumes/Data/git/sokanu/site/djangoproject/member_careers/tests.py",
 		"/Volumes/Data/git/sokanu/site/djangoproject/careers/utils.py",
-		"/Volumes/Data/git/sokanu/site/djangoproject/member_careers/utils.py",
-		"/Volumes/Data/git/sokanu/site/djangoproject/careers/tests.py",
-		"/Volumes/Data/git/sokanu/site/djangoproject/career_profile/tests.py",
-		"/Volumes/Data/git/sokanu/site/djangoproject/sokanu/templates/sokanu/press.html",
-		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/member_profile/lib/templates/life_story_career_add_review.html",
-		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/career_profile/lib/templates/review--review.html",
-		"/Volumes/Data/git/sokanu/site/djangoproject/static/sass/global/_forms.scss",
-		"/Volumes/Data/git/sokanu/site/djangoproject/newsfeed/views.py",
-		"/Volumes/Data/git/sokanu/site/djangoproject/member_profile/views.py",
-		"/Volumes/Data/git/sokanu/site/djangoproject/members/templates/members/index.html"
+		"/Volumes/Data/git/sokanu/site/djangoproject/member_careers/utils.py"
 	],
 	"find":
 	{
@@ -707,7 +707,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
 			"",
@@ -845,6 +845,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"UA-",
+			"button",
+			"petitions",
+			"; ",
+			"banner",
+			"section",
+			"; ",
+			"hero-box--caption",
+			"$scope.petitionSignatures",
+			"data",
+			"changeApiSecret",
+			"changeApiKey",
+			"eb4d16cccf1b537eb172cd1cbe60b396e5a8c3f15c7b1ef6630ebf39ba33b37f",
+			"changeUrl",
+			" + Math.random()",
+			"15",
+			"5",
+			"text",
+			"title",
+			"text",
+			"title",
+			"h2",
+			"p",
+			"; ",
+			",",
 			"\"",
 			"type",
 			"image",
@@ -947,32 +972,7 @@
 			"^@media.*(480|768|1200).*\\{$",
 			"^@media.*\\(.*(480|768|1200)px.*\\{$",
 			"@media.*\\(.*(480|768|1200)px.*\\{",
-			"@media.*\\(.*(480|768|1200)px",
-			"^@media(.(?!480|768|1200))*$",
-			"^@media(.(?=480|768|1200))px*$",
-			"^@media(.(?!480|768|1200))*$",
-			"^@media(.(?=480|768|1200))*$",
-			"^@media(.(?!480|768|1200))*$",
-			"^@media(.(480|768|1200))*$",
-			"@media.*\\(.*(480|768|1200).*\\)",
-			"^@media.*\\(.*(480|768|1200).*\\)$",
-			"@media.*\\(.*(480|768|1200)px",
-			"^@media(.(480|768|1200))*$",
-			"^@media(.(?!480|768|1200))*$",
-			"^@media(.(?!480|768))*$",
-			"^@media(.(?!480))*$",
-			"^(.(?!480)px)*$",
-			"^(.(?!480))*$",
-			"@media.*(?<!.*480.*)px.*\\)",
-			"@media.*(?<!480|768)px.*\\)",
-			"@media.*(?>!480)px.*",
-			"@media.*(?>!.*480.*)px.*",
-			"^@media.*(?>!.*480.*)px.*\\{$",
-			"^@media.*(?!.*TN.*).*\\{$ ",
-			"^@media.*(?!.*TN.*).*{$ ",
-			"^@media.*(?!.*TN.*).*$ ",
-			"^@media(?!.*TN.*).*$ ",
-			"@media.*(?<!480|768)px.*\\)"
+			"@media.*\\(.*(480|768|1200)px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1168,6 +1168,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"ind",
+				"app/index.html"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"app",
+				"app/scripts/app.js"
+			],
+			[
+				"controller",
+				"app/scripts/controllers/heroGrid.js"
+			],
+			[
+				"inde",
+				"app/index.html"
+			],
 			[
 				"git",
 				".gitignore"
@@ -1659,26 +1679,6 @@
 			[
 				"jsmatchingrecommend",
 				"static/js/modules/matching/lib/templates/recommended_career.html"
-			],
-			[
-				"stumblercareer",
-				"static/js/modules/career_stumbler/lib/templates/career.html"
-			],
-			[
-				"landing",
-				"sokanu/templates/sokanu/landing.html"
-			],
-			[
-				"main_m",
-				"static/sass/widgets/_main_menu.scss"
-			],
-			[
-				"membercareermode",
-				"member_careers/models.py"
-			],
-			[
-				"careerprofileviews",
-				"career_profile/views.py"
 			]
 		],
 		"width": 0.0
