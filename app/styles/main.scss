@@ -84,12 +84,24 @@ p { font-family: $proxima-stack; }
 // The Hero Banner //
 /////////////////////
 
-.hero-banner {
+.hero-banner { height: 290px; padding: 35px 0; background-image: url(../images/pano.jpg); }
+
+.hero-banner--logo {
+    width: 385px;
     height: 290px;
-    padding: 35px 0;
-    background-image: url(../images/pano.jpg);
+    margin: 0 auto;
+    background-image: url(../images/logo.png);
+    font-size: 0;
 }
-.hero-banner--logo  { width: 385px; height: 290px; margin: 0 auto; background-image: url(../images/logo.png); font-size: 0; }
+
+@media (max-width: 767px) {
+   .hero-banner { padding: 35px 20px; width: 100%; margin-left: -20px; }
+}
+
+@media (max-width: 480px) {
+    .hero-banner        { height: 200px; padding: 30px 20px; width: 100%; margin-left: -20px; }
+    .hero-banner--logo  { width: 240px; height: 180px; background-image: url(../images/logo-small.png); }
+}
 
 
 
@@ -114,6 +126,16 @@ p { font-family: $proxima-stack; }
     text-align: center;
     font-size: 24px;
     text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .hero-cta--the-message { font-size: 20px; line-height: 26px; }
+}
+
+@media (max-width: 480px) {
+    .hero-cta { margin: 40px auto 70px; }
+    .hero-cta--the-button,
+    .hero-cta--the-button:hover { padding: 20px 10px; }
 }
 
 
