@@ -242,7 +242,7 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
     background-size: 100% auto;
     background-position: 50% 12%;
 
-    @include filter(saturate(0%));
+    @include filter(saturate(0%) brightness(50%));
 }
 
 
