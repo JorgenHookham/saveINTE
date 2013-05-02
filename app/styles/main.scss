@@ -187,7 +187,7 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 // Different types of hero box
 
-.hero-box__quote    { @extend .g-1x1; }
+.hero-box__quote    { @extend .g-2x2; }
 .hero-box__photo    { @extend .g-2x2; }
 .hero-box__video    { @extend .g-2x2; }
 .hero-box__petition { @extend .g-2x2; text-align: center; }
