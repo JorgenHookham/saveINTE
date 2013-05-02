@@ -187,8 +187,8 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 // Different types of hero box
 
-.hero-box__quote    { @extend .g-2x2; }
-.hero-box__photo    { @extend .g-2x2; }
+.hero-box__quote    { @extend .g-1x1; }
+.hero-box__photo    { @extend .g-2x1; }
 .hero-box__video    { @extend .g-2x2; }
 .hero-box__petition { @extend .g-2x2; text-align: center; }
 
@@ -206,10 +206,14 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 // Quote elements
 
-.hero-box--author { position: absolute; right: 16px; bottom: 10px; left: 16px; }
+.hero-box--author { position: absolute; right: 16px; bottom: 10px; left: 16px; z-index: 20; @include text-shadow(0 0 1px rgba(0, 0, 0, 0.32)); }
+.hero-box--author--name,
+.hero-box--author--credential { margin: 0; }
 .hero-box--quote {
     @extend .hero-box--title;
     top: 10px; right: 16px; left: 16px;
+
+    z-index: 20;
 
     &:before {
         content: '“';
@@ -235,8 +239,8 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
     width: 100%; height: 100%;
     margin: 0;
 
-    background-size: auto 100%;
-    background-position: 50% 50%;
+    background-size: 100% auto;
+    background-position: 50% 12%;
 
     @include filter(saturate(0%));
 }
@@ -272,6 +276,7 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 }
 
 @media (max-width: 1200px) {
+    .hero-box--quote            { font-size: 18px; }
     .hero-box--signature-count  { font-size: 160px; }
     .hero-box--signatures       { font-size: 40px; }
     .hero-box--and-counting     { font-size: 20px; }
