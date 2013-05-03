@@ -49,7 +49,7 @@ saveINTEapp.controller('heroGridController',
                 template: 'hero-box-templates/photo.html'
             },
             {
-                quote: 'As an alumni I stand to lose my biggest network, fresh talent coming out of the program.',
+                quote: 'As an alumnus I stand to lose my biggest network, fresh talent coming out of the program.',
                 author: 'Jørgen Hookham',
                 credential: 'Designer, Sokanu',
                 imageUrl: 'people/jorgen-hookham.jpg',
