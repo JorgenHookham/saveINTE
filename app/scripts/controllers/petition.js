@@ -3,7 +3,7 @@
 saveINTEapp.controller('petitionController',
     function petitionController ($scope) {
 
-        $scope.signatures = 377;
+        $scope.signatures = 0;
 
         var changeApiKey    = '3183c8e44803aa6f8721e6990b1d94423ee6d35b0ca6927ec5f7a2d10fac5e97';
 
@@ -21,7 +21,6 @@ saveINTEapp.controller('petitionController',
             type: 'GET',
             data: requestParameters,
             success: function(data) {
-                console.log(data);
                 $scope.$apply(function(){
                     $scope.signatures = data.signature_count;
                 });
