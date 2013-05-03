@@ -31,7 +31,7 @@ saveINTEapp.controller('heroGridController',
                 template: 'hero-box-templates/photo.html'
             },
             {
-                quote: 'We have one of the best programs in the university, if anything it should be looked at as one of it\'s crowned jewels.',
+                quote: 'We have one of the best programs in the university, if anything it should be looked at as one of its crown jewels.',
                 author: 'Parker Busswood',
                 credential: 'Front-End Engineer, East Side Games',
                 imageUrl: 'people/parker-busswood.jpg',

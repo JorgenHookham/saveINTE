@@ -57,7 +57,6 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
     display: block;
 
     background: $pink;
-    border-bottom: 4px solid darken($pink, 12%);
 
     color: #fff;
     text-transform: uppercase;
@@ -66,7 +65,28 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 }
 
 .big-button,
-.big-button:hover { @extend .button; padding: 50px 20px; border-bottom: 12px solid darken($pink, 12%); font-size: 24px; }
+.big-button:hover { 
+    @extend .button; 
+    
+    @include background-image(linear-gradient(bottom, darken($pink, 6%) 0%, darken($pink, 3%) 100%));
+    @include box-shadow(0px 6px 0px darken($pink, 12%));
+    @include single-transition(all, 0.1s, ease-in-out);
+    
+    border: 1px solid #C60D39;
+    font-size: 24px;
+    padding: 50px 20px;
+
+    &:active {
+        @extend .big-button;
+
+        @include background-image(linear-gradient(bottom, darken($pink, 8%) 0%, darken($pink, 12%) 100%));
+        @include box-shadow(0px 2px 0px darken($pink, 20%));
+        @include translateY(6px);
+
+        color: #f5f5f5;
+    }
+}
+
 
 @media (max-width: 480px) {
     .big-button,
