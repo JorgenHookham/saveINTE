@@ -323,6 +323,8 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 .engage--thing--icon    { display: block; width: 100px; height: 100px; margin: 0 auto; }
 .engage--thing--head    {  }
 .engage--thing--note    {  }
+.engage--thing--link,
+.engage--thing--link:hover { color: #fff; }
 
 .engage--thing__twitter {
     @extend .engage--thing;
