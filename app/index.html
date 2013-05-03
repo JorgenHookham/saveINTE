@@ -6,12 +6,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>Save Interactive Design</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/cyn0ari.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -38,10 +36,70 @@
       </p>
       <p class="hero-cta--the-message">
         Interactive Design is scheduled to be
-        suspended, the board of governors are voting on whether or not to
+        suspended, the Board of Governors are voting on whether or not to
         discontinue the program on May 14.
       </p>
       <a class="hero-cta--the-button" href="https://www.change.org/en-CA/petitions/capilano-university-save-the-interactive-design-program#share">Sign The Petition.</a>
+    </section>
+
+    <section class="hero-grid" ng-controller="heroGridController">
+      <div class="container hero-grid--container">
+
+        <article class="hero-box hero-box__petition" ng-controller="petitionController">
+          <div class="hero-box--inner">
+            <h1 class="hero-box--signature-count">{{ signatures }}</h1>
+            <h2 class="hero-box--signatures">Signatures</h2>
+            <h3 class="hero-box--and-counting">(And Counting.)</h3>
+            <a class="hero-box--sign" href="https://www.change.org/en-CA/petitions/capilano-university-save-the-interactive-design-program#share">Sign The Petition</a>
+          </div>
+        </article>
+
+        <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
+          <div class="hero-box--inner" ng-include="" src="hero.template"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="engage">
+      <div class="container">
+        <div class="engage--thing__twitter">
+          <a href="https://twitter.com/search?q=%23saveINTE">
+            <div class="engage--thing--inner">
+              <i class="engage--thing--icon"></i>
+              <h3 class="engage--thing--head">Tweet It.</h3>
+              <p class="engage--thing--note">We're on Twitter, too. Tweet your support with #SaveINTE</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="engage--thing__facebook">
+          <a href="https://www.facebook.com/SaveInteractiveDesign">
+            <div class="engage--thing--inner">
+              <i class="engage--thing--icon"></i>
+              <h3 class="engage--thing--head">Share It.</h3>
+              <p class="engage--thing--note">Show your support on our Facebook page</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="engage--thing__instagram">
+          <div class="engage--thing--inner">
+            <i class="engage--thing--icon"></i>
+            <h3 class="engage--thing--head">Shoot It.</h3>
+            <p class="engage--thing--note">Snap a photo and send it our way</p>
+          </div>
+        </div>
+        
+        <div class="engage--thing__vine">
+          <div class="engage--thing--inner">
+            <i class="engage--thing--icon"></i>
+            <h3 class="engage--thing--head">Vine It.</h3>
+            <p class="engage--thing--note">Show your support with a short video</p>
+          </div>
+        </div>
+        
+      </div>
+      <h1 class="engage--hashtag">#saveINTE</h1>
     </section>
 
     <section class="about-us">
@@ -58,63 +116,11 @@
       </div>
     </section>
 
-    <section class="hero-grid" ng-controller="heroGridController">
-      <div class="container hero-grid--container">
-
-        <article class="hero-box hero-box__petition" ng-controller="petitionController">
-          <div class="hero-box--inner">
-            <h1 class="hero-box--signature-count">{{ signatures }}</h1>
-            <h2 class="hero-box--signatures">Signatures</h2>
-            <h3 class="hero-box--and-counting">(And Counting.)</h3>
-            <a class="hero-box--sign" href="https://www.change.org/en-CA/petitions/capilano-university-save-the-interactive-design-program#share">Sign The Petition</a>
-          </div>
-        </article>
-
-        <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
-          <div class="hero-box--inner" ng-include src="hero.template"></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="engage">
-      <div class="container">
-        <a class="engage--thing__twitter" href="#">
-          <div class="engage--thing--inner">
-            <i class="engage--thing--icon"></i>
-            <h3 class="engage--thing--head">Tweet It.</h3>
-            <p class="engage--thing--note">We're on Twitter, too. Tweet your support with #SaveINTE</p>
-          </div>
-        </a>
-        <a class="engage--thing__facebook" href="#">
-          <div class="engage--thing--inner">
-            <i class="engage--thing--icon"></i>
-            <h3 class="engage--thing--head">Share It.</h3>
-            <p class="engage--thing--note">Show your support on our Facebook page</p>
-          </div>
-        </a>
-        <a class="engage--thing__instagram" href="#">
-          <div class="engage--thing--inner">
-            <i class="engage--thing--icon"></i>
-            <h3 class="engage--thing--head">Shoot It.</h3>
-            <p class="engage--thing--note">Take some damn photos.</p>
-          </div>
-        </a>
-        <a class="engage--thing__vine" href="#">
-          <div class="engage--thing--inner">
-            <i class="engage--thing--icon"></i>
-            <h3 class="engage--thing--head">Vine It.</h3>
-            <p class="engage--thing--note">Shoot some damn video.</p>
-          </div>
-        </a>
-      </div>
-      <h1 class="engage--hashtag">#saveINTE</h1>
-    </section>
-
     <footer class="contact-footer">
       <a class="contact-footer--address" href="mailto:now@saveinte.ca">Contact us: now@saveinte.ca</a>
     </footer>
 
-    <script src="components/angular/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
     <script src="components/jquery/jquery.min.js"></script>
     <script src="components/jquery-masonry/jquery.masonry.min.js"></script>
