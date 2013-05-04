@@ -572,14 +572,14 @@
 	},
 	"file_history":
 	[
-		"/Volumes/Data/git/saveINTE/app/scripts/controllers/heroGrid.js",
-		"/Volumes/Data/git/saveINTE/app/index.html",
-		"/Volumes/Data/git/saveINTE/dist/scripts/4cb05f55.scripts.js",
-		"/Volumes/Data/git/saveINTE/dist/index.html",
-		"/Volumes/Data/git/saveINTE/app/hero-box-templates/photo.html",
 		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
-		"/Volumes/Data/git/saveINTE/app/hero-box-templates/quote.html",
+		"/Volumes/Data/git/saveINTE/app/index.html",
 		"/Volumes/Data/git/saveINTE/app/scripts/controllers/petition.js",
+		"/Volumes/Data/git/saveINTE/dist/index.html",
+		"/Volumes/Data/git/saveINTE/app/scripts/controllers/heroGrid.js",
+		"/Volumes/Data/git/saveINTE/dist/scripts/4cb05f55.scripts.js",
+		"/Volumes/Data/git/saveINTE/app/hero-box-templates/photo.html",
+		"/Volumes/Data/git/saveINTE/app/hero-box-templates/quote.html",
 		"/Volumes/Data/git/saveINTE/app/styles/_compass_twitter_bootstrap_responsive.scss",
 		"/Volumes/Data/git/saveINTE/README.md",
 		"/Volumes/Data/git/saveINTE/app/scripts/app.js",
@@ -845,6 +845,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"</a>",
+			"<a href",
 			"<a class=\"engage",
 			"href=\"#\"",
 			"<a class=\"engage--thin",
@@ -970,9 +972,7 @@
 			"@media.*(1200).*?\\)",
 			"@media.*(768).*?\\)",
 			"@media.*(480).*?\\)",
-			"@media (max-width: 480px)",
-			"@media.*(480).*?\\)",
-			"@media.*(768).*?\\)"
+			"@media (max-width: 480px)"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1169,6 +1169,22 @@
 		"selected_items":
 		[
 			[
+				"petition",
+				"app/scripts/controllers/petition.js"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"main",
+				"app/styles/main.scss"
+			],
+			[
+				"distind",
+				"dist/index.html"
+			],
+			[
 				"herog",
 				"app/scripts/controllers/heroGrid.js"
 			],
@@ -1185,16 +1201,8 @@
 				"app/index.html"
 			],
 			[
-				"petition",
-				"app/scripts/controllers/petition.js"
-			],
-			[
 				"photo",
 				"app/hero-box-templates/photo.html"
-			],
-			[
-				"main",
-				"app/styles/main.scss"
 			],
 			[
 				"quote",
@@ -1671,14 +1679,6 @@
 			[
 				"navbar",
 				"static/sass/widgets/_navbar.scss"
-			],
-			[
-				"notific",
-				"static/sass/widgets/_notifications.scss"
-			],
-			[
-				"tyo",
-				"static/sass/global/_typography.scss"
 			]
 		],
 		"width": 0.0
