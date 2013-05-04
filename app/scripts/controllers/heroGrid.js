@@ -65,6 +65,15 @@ saveINTEapp.controller('heroGridController',
                 type: 'photo',
                 priority: 6,
                 template: 'hero-box-templates/photo.html'
+            },
+            {
+                quote: 'The Interactive Design Program is the reason I have the career I do today, I would be nowhere without it.',
+                author: 'Sean Patterson',
+                credential: 'System Analyst/Web Developer, RewardStream',
+                imageUrl: 'people/sean-patterson.jpg',
+                type: 'photo',
+                priority: 9,
+                template: 'hero-box-templates/photo.html'
             }
         ];
 
@@ -110,6 +119,7 @@ saveINTEapp.controller('heroGridController',
                 priority: 3,
                 template: 'hero-box-templates/quote.html'
             }
+
         ];
 
         // Hero Grid Items (vine embeds)
