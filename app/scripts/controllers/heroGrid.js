@@ -3,6 +3,8 @@
 saveINTEapp.controller('heroGridController',
     function heroGridController ($scope) {
 
+        $scope.heroBoxes;
+
         // Masonry
 
         $scope.heroGrid = $('.hero-grid--container');
@@ -21,15 +23,7 @@ saveINTEapp.controller('heroGridController',
         // Hero Grid Items (photos)
 
         $scope.photoBoxes = [
-            {
-                quote: 'The goal is to put people in the work force and be employable, we look to these programs for our new stars.',
-                author: 'Jason Bailey',
-                credential: 'CEO, East Side Games',
-                imageUrl: 'people/jason-bailey.jpg',
-                type: 'photo',
-                priority: 8,
-                template: 'hero-box-templates/photo.html'
-            },
+            { "quote": "The goal is to put people in the work force and be employable, we look to these programs for our new stars.", "author": "Jason Bailey", "credential": "CEO, East Side Games", "imageUrl": "people/jason-bailey.jpg", "type": "photo", "priority": 8, "template": "hero-box-templates/photo.html"},
             {
                 quote: 'We have one of the best programs in the university, if anything it should be looked at as one of it\'s crowned jewels.',
                 author: 'Parker Busswood',
@@ -150,6 +144,22 @@ saveINTEapp.controller('heroGridController',
             .concat($scope.youtubeBoxes);
 
         $scope.heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
+
+        $.ajax({
+            url: 'http://api.saveinte.ca/hero-boxes',
+            dataType: 'json',
+            contentType: 'application/json',
+            type: 'GET',
+            success: function (data) {
+                console.log('success', data);
+                // $scope.$apply(function () {
+                //     $scope.heroBoxes = data.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
+                // });
+            },
+            error: function (error, b, c) {
+                console.log('failure', error, b, c);
+            }
+        });
 
 });
 
