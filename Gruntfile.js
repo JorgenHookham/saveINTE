@@ -200,7 +200,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html', 'hero-box-templates/*.html'],
+          src: ['*.html', 'views/*.html', 'templates/*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }

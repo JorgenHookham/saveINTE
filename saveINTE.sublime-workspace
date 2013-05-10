@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"bor",
+				"border-box"
+			],
+			[
+				"her",
+				"heroBox"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"hero",
+				"hero-box--image"
+			],
+			[
 				"font",
 				"font-weight"
 			],
@@ -48,16 +64,8 @@
 				"petitionSignatures"
 			],
 			[
-				"hero",
-				"heroBoxes"
-			],
-			[
 				"font-",
 				"font-weight"
-			],
-			[
-				"her",
-				"hero-box--inner"
 			],
 			[
 				"c",
@@ -226,10 +234,6 @@
 			[
 				"first_",
 				"first_person_textual_description"
-			],
-			[
-				"bor",
-				"border-radius"
 			],
 			[
 				"quest",
@@ -510,10 +514,6 @@
 			[
 				"val",
 				"valign-caption"
-			],
-			[
-				"gene_graph-mar",
-				"gene_graph-marker-label"
 			]
 		]
 	},
@@ -572,15 +572,18 @@
 	},
 	"file_history":
 	[
-		"/Volumes/Data/git/saveINTE/app/scripts/controllers/petition.js",
+		"/Volumes/Data/git/saveINTE/app/hero-box-templates/photo.html",
+		"/Volumes/Data/git/saveINTE/Gruntfile.js",
+		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
+		"/Volumes/Data/git/saveINTE/app/hero-box-templates/youtube.html",
 		"/Volumes/Data/git/saveINTE/app/scripts/controllers/heroGrid.js",
 		"/Volumes/Data/git/saveINTE/app/index.html",
+		"/Volumes/Data/git/saveINTE/app/scripts/controllers/heroBox.js",
+		"/Volumes/Data/git/saveINTE/app/scripts/controllers/petition.js",
 		"/Volumes/Data/git/saveINTE/dist/index.html",
 		"/Volumes/Data/git/saveINTE/app/php.php",
 		"/Volumes/Data/git/saveINTE/app/google6de927924326a98e.html",
-		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
 		"/Volumes/Data/git/saveINTE/dist/scripts/4cb05f55.scripts.js",
-		"/Volumes/Data/git/saveINTE/app/hero-box-templates/photo.html",
 		"/Volumes/Data/git/saveINTE/app/hero-box-templates/quote.html",
 		"/Volumes/Data/git/saveINTE/app/styles/_compass_twitter_bootstrap_responsive.scss",
 		"/Volumes/Data/git/saveINTE/README.md",
@@ -696,10 +699,7 @@
 		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/member_profile/lib/templates/career_story_question_ask.html",
 		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/member_profile/career_story_question.js",
 		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/member_profile/lib/models/member_career_relation_question.js",
-		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/member_profile/career_story_experience.js",
-		"/Volumes/Data/git/sokanu/site/djangoproject/templates/search/widgets/career.html",
-		"/Volumes/Data/git/sokanu/site/djangoproject/templates/search/widgets/member.html",
-		"/Volumes/Data/git/sokanu/site/djangoproject/templates/search/search.html"
+		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/member_profile/career_story_experience.js"
 	],
 	"find":
 	{
@@ -845,6 +845,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"script",
+			"scriptTag",
+			"iframe",
+			"\"",
+			"div",
+			"iframe",
+			"embedUrl",
+			"http://www.youtube.com/embed/",
+			"z-index",
+			"html",
+			"2",
+			"40",
+			"&:nth-child(odd) {",
+			"__video",
+			"transi",
+			"10px",
+			"important",
+			"0",
+			"hero-box--title",
+			"\":",
+			"\",",
+			",",
 			"(?s)<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> [a-z_0-9\\-]+",
 			"<<<<<",
 			"curl",
@@ -950,34 +972,12 @@
 			"remove",
 			"addColumn",
 			"last_water_day",
-			"last_water",
-			"8",
-			"webkit",
-			"-webkit",
-			"left",
-			"class=plant",
-			"class",
-			"td",
-			"model",
-			"type=text",
-			"div",
-			"|",
-			"id",
-			"DataModel",
-			"already added",
-			"looks like you've",
-			"{% end block %}",
-			"mcr-review-cta",
-			"&.",
-			"of-type",
-			"affinity-diagram",
-			"include background-image",
-			"trait-diagram--marker"
+			"last_water"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"last_water",
@@ -1173,6 +1173,14 @@
 				"app/index.html"
 			],
 			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"photo",
+				"app/hero-box-templates/photo.html"
+			],
+			[
 				"petition",
 				"app/scripts/controllers/petition.js"
 			],
@@ -1199,10 +1207,6 @@
 			[
 				"in",
 				"app/index.html"
-			],
-			[
-				"photo",
-				"app/hero-box-templates/photo.html"
 			],
 			[
 				"quote",
@@ -1675,10 +1679,6 @@
 			[
 				"review--",
 				"static/js/modules/career_profile/lib/templates/review--relation.html"
-			],
-			[
-				"navbar",
-				"static/sass/widgets/_navbar.scss"
 			]
 		],
 		"width": 0.0
@@ -1695,6 +1695,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 365.0,
+	"side_bar_width": 157.0,
 	"status_bar_visible": true
 }
