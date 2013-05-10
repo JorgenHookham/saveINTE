@@ -122,7 +122,7 @@ saveINTEapp.controller('heroGridController',
 
         $scope.youtubeBoxes = [
             {
-                embedUrl: 'http://www.youtube.com/embed/smT_rI_hQiM',
+                embedCode: 'smT_rI_hQiM',
                 quote: "The goal is to put people in the work force and be employable, we look to these programs for our new stars.",
                 author: "Jason Bailey",
                 credential: "CEO, East Side Games",
@@ -136,7 +136,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'Josh Nilson',
                 credential: 'COO, East Side Games',
                 imageUrl: 'people/josh-nilson.jpg',
-                embedUrl: 'http://www.youtube.com/embed/kJcPCIAGfeY',
+                embedCode: 'kJcPCIAGfeY',
                 type: 'video__with-quote',
                 priority: 6,
                 template: 'hero-box-templates/youtube.html'
@@ -145,7 +145,7 @@ saveINTEapp.controller('heroGridController',
                 quote: 'Run, not walk, to the nearest interactive program',
                 author: 'Kristen',
                 credential: 'Currently Enrolled',
-                embedUrl: 'http://www.youtube.com/embed/Kb_VUNhdGpU',
+                embedCode: 'Kb_VUNhdGpU',
                 type: 'video__with-quote',
                 priority: 4,
                 template: 'hero-box-templates/youtube.html'
@@ -153,7 +153,7 @@ saveINTEapp.controller('heroGridController',
             {
                 author: 'Collin Stewart',
                 credential: 'Founder, VoltageCRM',
-                embedUrl: 'http://www.youtube.com/embed/LUiP5q2X_fU',
+                embedCode: 'LUiP5q2X_fU',
                 type: 'video',
                 priority: 7,
                 template: 'hero-box-templates/youtube.html'
@@ -169,22 +169,6 @@ saveINTEapp.controller('heroGridController',
             .concat($scope.youtubeBoxes);
 
         $scope.heroBoxes = heroBoxes.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
-
-        $.ajax({
-            url: 'http://api.saveinte.ca/hero-boxes',
-            dataType: 'json',
-            contentType: 'application/json',
-            type: 'GET',
-            success: function (data) {
-                console.log('success', data);
-                // $scope.$apply(function () {
-                //     $scope.heroBoxes = data.sort(function(a,b) { return parseFloat(a.priority) - parseFloat(b.priority) } );
-                // });
-            },
-            error: function (error, b, c) {
-                console.log('failure', error, b, c);
-            }
-        });
 
 });
 

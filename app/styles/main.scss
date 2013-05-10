@@ -203,7 +203,7 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
 .hero-box:nth-child(3n) > .hero-box--inner { background: $pink; }
 
-.hero-box__quote:nth-of-type(2n) > .hero-box--inner { background: darken($dark-grey, 24%); }
+.hero-box__quote:nth-of-type(2n + 1) > .hero-box--inner { background: darken($dark-grey, 24%); }
 
 
 // Different types of hero box
@@ -262,6 +262,14 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
 
     &:nth-child(odd) {
         &:after { left: 75%; }
+    }
+
+    &.s-playing {
+        .hero-box--image,
+        .hero-box--author,
+        .hero-box--quote,
+        &:after { display: none; }
+        .hero-box--youtube-embed { display: block; width: 100%; height: 100%; @include filter(saturate(100%)); }
     }
 }
 

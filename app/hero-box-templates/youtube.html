@@ -4,4 +4,4 @@
     <h4 class="hero-box--author--credential">{{ hero.credential }}</h4>
 </hgroup>
 <figure class="hero-box--image" style="background-image: url(images/{{ hero.imageUrl }})"></figure>
-<iframe class="hero-box--youtube-embed" width="560" height="315" src="{{ hero.embedUrl }}?controls=2&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<script id="youtube--{{ hero.embedCode }}" class="hero-box--youtube-embed" youtube-embed data-embed-code="{{ hero.embedCode }}"></script>

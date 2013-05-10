@@ -54,7 +54,7 @@
           </div>
         </article>
 
-        <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
+        <article class="hero-box hero-box__{{ hero.type }} {{ hero.state }}" ng-repeat="hero in heroBoxes" ng-controller="heroBoxController" ng-click="playVideo(hero)">
           <div class="hero-box--inner" ng-include="" src="hero.template"></div>
         </article>
       </div>
@@ -128,6 +128,7 @@
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/heroGrid.js"></script>
+    <script src="scripts/controllers/heroBox.js"></script>
     <script src="scripts/controllers/petition.js"></script>
     <!-- endbuild -->
 
