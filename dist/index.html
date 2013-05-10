@@ -9,7 +9,7 @@
     <title>Save Interactive Design</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles/ee7a69da.main.css">
+    <link rel="stylesheet" href="styles/c410eec0.main.css">
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/cyn0ari.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -54,7 +54,7 @@
           </div>
         </article>
 
-        <article class="hero-box hero-box__{{ hero.type }}" ng-repeat="hero in heroBoxes">
+        <article class="hero-box hero-box__{{ hero.type }} {{ hero.state }}" ng-repeat="hero in heroBoxes" ng-controller="heroBoxController" ng-click="playVideo(hero)">
           <div class="hero-box--inner" ng-include="" src="hero.template"></div>
         </article>
       </div>
@@ -125,7 +125,7 @@
     <script src="components/jquery/jquery.min.js"></script>
     <script src="components/jquery-masonry/jquery.masonry.min.js"></script>
 
-    <script src="scripts/50acf6e2.scripts.js"></script>
+    <script src="scripts/63fb9278.scripts.js"></script>
 
     <script>
       var _gaq=[['_setAccount','UA-40542357-1'],['_trackPageview']];
