@@ -572,11 +572,13 @@
 	},
 	"file_history":
 	[
-		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
-		"/Volumes/Data/git/saveINTE/app/index.html",
 		"/Volumes/Data/git/saveINTE/app/scripts/controllers/petition.js",
-		"/Volumes/Data/git/saveINTE/dist/index.html",
 		"/Volumes/Data/git/saveINTE/app/scripts/controllers/heroGrid.js",
+		"/Volumes/Data/git/saveINTE/app/index.html",
+		"/Volumes/Data/git/saveINTE/dist/index.html",
+		"/Volumes/Data/git/saveINTE/app/php.php",
+		"/Volumes/Data/git/saveINTE/app/google6de927924326a98e.html",
+		"/Volumes/Data/git/saveINTE/app/styles/main.scss",
 		"/Volumes/Data/git/saveINTE/dist/scripts/4cb05f55.scripts.js",
 		"/Volumes/Data/git/saveINTE/app/hero-box-templates/photo.html",
 		"/Volumes/Data/git/saveINTE/app/hero-box-templates/quote.html",
@@ -697,9 +699,7 @@
 		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/member_profile/career_story_experience.js",
 		"/Volumes/Data/git/sokanu/site/djangoproject/templates/search/widgets/career.html",
 		"/Volumes/Data/git/sokanu/site/djangoproject/templates/search/widgets/member.html",
-		"/Volumes/Data/git/sokanu/site/djangoproject/templates/search/search.html",
-		"/Volumes/Data/git/sokanu/site/djangoproject/static/js/modules/career_profile/lib/tests/unit_tests.js",
-		"/Volumes/Data/git/sokanu/site/djangoproject/career_profile/urls.py"
+		"/Volumes/Data/git/sokanu/site/djangoproject/templates/search/search.html"
 	],
 	"find":
 	{
@@ -707,9 +707,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
+			"",
 			"*.html",
 			"",
 			"*.html",
@@ -836,8 +837,7 @@
 			"*.js",
 			"",
 			"*.scss",
-			"*.js",
-			""
+			"*.js"
 		]
 	},
 	"find_state":
@@ -845,6 +845,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"(?s)<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> [a-z_0-9\\-]+",
+			"<<<<<",
+			"curl",
+			"{ \"quote\":",
+			"\n  ",
+			"'",
+			":",
+			"\n                ",
+			"\",",
+			"signed_at",
+			"country_name",
+			",\"state_province\":null,",
+			"\"city\"",
+			"{\"name\":",
+			"\"page\"",
 			"</a>",
 			"<a href",
 			"<a class=\"engage",
@@ -957,27 +972,12 @@
 			"of-type",
 			"affinity-diagram",
 			"include background-image",
-			"trait-diagram--marker",
-			"affinity-diagram",
-			"happiness-icons",
-			"@media",
-			"@media.*(480|768|1200).*?\\)",
-			"@media (min-width: 1200px)",
-			"@media (min-height: 1200px)",
-			"@media.*(1200).*?\\)",
-			"min",
-			"@include",
-			"@media.*(1200).*?\\)",
-			"@media (max-width: 1200px)",
-			"@media.*(1200).*?\\)",
-			"@media.*(768).*?\\)",
-			"@media.*(480).*?\\)",
-			"@media (max-width: 480px)"
+			"trait-diagram--marker"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 			"last_water",
@@ -1169,12 +1169,12 @@
 		"selected_items":
 		[
 			[
-				"petition",
-				"app/scripts/controllers/petition.js"
-			],
-			[
 				"index",
 				"app/index.html"
+			],
+			[
+				"petition",
+				"app/scripts/controllers/petition.js"
 			],
 			[
 				"main",

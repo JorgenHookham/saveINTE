@@ -23,7 +23,6 @@ saveINTEapp.controller('heroGridController',
         // Hero Grid Items (photos)
 
         $scope.photoBoxes = [
-            { "quote": "The goal is to put people in the work force and be employable, we look to these programs for our new stars.", "author": "Jason Bailey", "credential": "CEO, East Side Games", "imageUrl": "people/jason-bailey.jpg", "type": "photo", "priority": 8, "template": "hero-box-templates/photo.html"},
             {
                 quote: 'We have one of the best programs in the university, if anything it should be looked at as one of its crown jewels.',
                 author: 'Parker Busswood',
@@ -31,15 +30,6 @@ saveINTEapp.controller('heroGridController',
                 imageUrl: 'people/parker-busswood.jpg',
                 type: 'photo',
                 priority: 2,
-                template: 'hero-box-templates/photo.html'
-            },
-            {
-                quote: 'People from the INTE program come ready to wear many hats. Cutting this program would leave a big gap.',
-                author: 'Josh Nilson',
-                credential: 'COO, East Side Games',
-                imageUrl: 'people/josh-nilson.jpg',
-                type: 'photo',
-                priority: 8,
                 template: 'hero-box-templates/photo.html'
             },
             {
@@ -63,7 +53,7 @@ saveINTEapp.controller('heroGridController',
             {
                 quote: 'The Interactive Design Program is the reason I have the career I do today, I would be nowhere without it.',
                 author: 'Sean Patterson',
-                credential: 'System Analyst/Web Developer, RewardStream',
+                credential: 'System Analyst, RewardStream',
                 imageUrl: 'people/sean-patterson.jpg',
                 type: 'photo',
                 priority: 9,
@@ -132,13 +122,38 @@ saveINTEapp.controller('heroGridController',
 
         $scope.youtubeBoxes = [
             {
-                embedUrl: 'http://www.youtube.com/embed/NvK1F_odamo',
-                type: 'video',
+                embedUrl: 'http://www.youtube.com/embed/smT_rI_hQiM',
+                quote: "The goal is to put people in the work force and be employable, we look to these programs for our new stars.",
+                author: "Jason Bailey",
+                credential: "CEO, East Side Games",
+                imageUrl: "people/jason-bailey.jpg",
+                type: 'video__with-quote',
                 priority: 4,
                 template: 'hero-box-templates/youtube.html'
             },
             {
+                quote: 'People from the INTE program come ready to wear many hats. Cutting this program would leave a big gap.',
+                author: 'Josh Nilson',
+                credential: 'COO, East Side Games',
+                imageUrl: 'people/josh-nilson.jpg',
                 embedUrl: 'http://www.youtube.com/embed/kJcPCIAGfeY',
+                type: 'video__with-quote',
+                priority: 6,
+                template: 'hero-box-templates/youtube.html'
+            },
+            {
+                quote: 'Run, not walk, to the nearest interactive program',
+                author: 'Kristen',
+                credential: 'Currently Enrolled',
+                embedUrl: 'http://www.youtube.com/embed/Kb_VUNhdGpU',
+                type: 'video__with-quote',
+                priority: 4,
+                template: 'hero-box-templates/youtube.html'
+            },
+            {
+                author: 'Collin Stewart',
+                credential: 'Founder, VoltageCRM',
+                embedUrl: 'http://www.youtube.com/embed/LUiP5q2X_fU',
                 type: 'video',
                 priority: 6,
                 template: 'hero-box-templates/youtube.html'
