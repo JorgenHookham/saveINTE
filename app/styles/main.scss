@@ -372,8 +372,16 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
     .hero-box__video,
     .hero-box__video__with-quote {
         .hero-box--image    { top: 0; right: 0; bottom: 50%; left: 0; width: 100%; height: 50%; }
-        .hero-box--quote    { top: 50%; right: 0; bottom: 0; left: 0; }
+        .hero-box--quote    { top: 50%; right: 0; bottom: 0; left: 0; width: 100%; @include box-sizing('border-box'); }
         .hero-box--author   { right: 0; bottom: 0; left: 0; }
+
+        &:after { left: 50% !important; top: 25%; }
+    }
+
+    .hero-box__video {
+        .hero-box--quote { display: none; }
+        .hero-box--image { height: 100%; }
+        &:after { left: 50% !important; top: 50%; }
     }
 }
 
@@ -387,6 +395,12 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
     .hero-box__video__with-quote {
         .hero-box--image    { bottom: 0; height: 100%; }
         .hero-box--quote    { display: none; }
+        &:after { left: 50% !important; top: 50%; }
+    }
+
+    .hero-box__photo {
+        .hero-box--image    { top: 50%; right: 0; bottom: 0; left: 0; width: 100%; height: 50%; }
+        .hero-box--quote    { top: 0; right: 0; bottom: 50%; left: 0; width: 100%; @include box-sizing('border-box'); display: block; }
     }
 }
 
@@ -394,6 +408,11 @@ h4 { font-size: 14px; line-height: 18px; font-weight: 300; }
     .hero-box--signature-count  { font-size: 200px; }
     .hero-box--signatures       { font-size: 60px; }
     .hero-box--and-counting     { font-size: 30px; }
+
+    .hero-box__photo {
+        .hero-box--image    { display: none; }
+        .hero-box--quote    { top: 0; right: 0; bottom: 0; left: 0; width: 100%; }
+    }
 }
 
 @media (max-width: 525px) {
