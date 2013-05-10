@@ -92,7 +92,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'Hank Leber',
                 credential: 'CEO & Co-Founder GonnaBe',
                 type: 'quote',
-                priority: 7,
+                priority: 9,
                 template: 'hero-box-templates/quote.html'
             },
             {
@@ -155,7 +155,7 @@ saveINTEapp.controller('heroGridController',
                 credential: 'Founder, VoltageCRM',
                 embedUrl: 'http://www.youtube.com/embed/LUiP5q2X_fU',
                 type: 'video',
-                priority: 6,
+                priority: 7,
                 template: 'hero-box-templates/youtube.html'
             }
         ];
