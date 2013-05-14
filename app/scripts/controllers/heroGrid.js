@@ -113,7 +113,7 @@ saveINTEapp.controller('heroGridController',
                 quote: 'The vast majority of graduates of this program get jobs. Good, long term jobs.',
                 author: 'Dave Rankin',
                 type: 'quote',
-                priority: 1,
+                priority: 2,
                 template: 'templates/quote.html'
             },
             {
@@ -166,7 +166,7 @@ saveINTEapp.controller('heroGridController',
             {
                 quote: 'This program is valuable to both industry and students. It is a proven winner. Cutting it is more than unfortunate but misguided.',
                 author: 'Alvin Wasserman',
-                credential: 'President,Wasserman+Partners',
+                credential: 'President, Wasserman+Partners',
                 type: 'quote',
                 priority: 5,
                 template: 'templates/quote.html'
@@ -197,11 +197,60 @@ saveINTEapp.controller('heroGridController',
 
         $scope.youtubeBoxes = [
             {
+                embedCode: 'MKqs_DFjbqk',
+                author: 'Lorraine Chisholm',
+                credential: 'Director of UX, Work at Play',
+                type: 'video',
+                priority: 1,
+                template: 'templates/youtube.html'
+            },
+            {
+                embedCode: 'j4MkyrHjnic',
+                author: 'Ryan Opina',
+                credential: 'User Experience Designer, Engine Digital',
+                type: 'video',
+                priority: 1,
+                template: 'templates/youtube.html'
+            },
+            {
+                embedCode: 'CoDN3F389iA',
+                author: 'David Gratton',
+                credential: 'CEO, Work at Play',
+                type: 'video',
+                priority: 1,
+                template: 'templates/youtube.html'
+            },
+            {
+                embedCode: 'KkDDQryoQyw',
+                author: 'Jesse Spink',
+                credential: 'Creative Director, Ayogo',
+                type: 'video',
+                priority: 1,
+                template: 'templates/youtube.html'
+            },
+            {
+                embedCode: 'AZ0GAAXvCkc',
+                author: 'Andrew Harnden',
+                credential: 'CSO, Work at Play',
+                type: 'video',
+                priority: 1,
+                template: 'templates/youtube.html'
+            },
+            {
+                quote: 'Run, not walk, to the nearest interactive program',
+                author: 'Kristen',
+                credential: 'Currently Enrolled',
+                embedCode: 'Kb_VUNhdGpU',
+                type: 'video__with-quote',
+                priority: 1,
+                template: 'templates/youtube.html'
+            },
+            {
                 embedCode: 'smT_rI_hQiM',
-                quote: "The goal is to put people in the work force and be employable, we look to these programs for our new stars.",
-                author: "Jason Bailey",
-                credential: "CEO, East Side Games",
-                imageUrl: "people/jason-bailey.jpg",
+                quote: 'The goal is to put people in the work force and be employable, we look to these programs for our new stars.',
+                author: 'Jason Bailey',
+                credential: 'CEO, East Side Games',
+                imageUrl: 'people/jason-bailey.jpg',
                 type: 'video__with-quote',
                 priority: 4,
                 template: 'templates/youtube.html'
@@ -214,15 +263,6 @@ saveINTEapp.controller('heroGridController',
                 embedCode: 'kJcPCIAGfeY',
                 type: 'video__with-quote',
                 priority: 6,
-                template: 'templates/youtube.html'
-            },
-            {
-                quote: 'Run, not walk, to the nearest interactive program',
-                author: 'Kristen',
-                credential: 'Currently Enrolled',
-                embedCode: 'Kb_VUNhdGpU',
-                type: 'video__with-quote',
-                priority: 4,
                 template: 'templates/youtube.html'
             },
             {
