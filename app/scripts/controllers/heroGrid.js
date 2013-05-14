@@ -110,6 +110,34 @@ saveINTEapp.controller('heroGridController',
 
         $scope.quoteBoxes = [
             {
+                quote: 'Interactive Design has played an integral role in the growth of Idea Rebel.',
+                author: 'Jamie Garratt, Idea Rebel',
+                type: 'quote',
+                priority: 1,
+                template: 'templates/quote.html'
+            },
+            {
+                quote: 'This is one of the most innovative and valuable programs at Capilano University.',
+                author: 'Cyri Jones, ZENPortfolios',
+                type: 'quote',
+                priority: 2,
+                template: 'templates/quote.html'
+            },
+            {
+                quote: 'We feel as if we discovered gold on campus.',
+                author: 'Myles Galvin, Capilano Small Business Association',
+                type: 'quote',
+                priority: 2,
+                template: 'templates/quote.html'
+            },
+            {
+                quote: 'I owe all of my success to this program.',
+                author: 'Matt Vague, Metalab',
+                type: 'quote',
+                priority: 1,
+                template: 'templates/quote.html'
+            },
+            {
                 quote: 'The vast majority of graduates of this program get jobs. Good, long term jobs.',
                 author: 'Dave Rankin',
                 type: 'quote',
@@ -121,7 +149,7 @@ saveINTEapp.controller('heroGridController',
                 author: 'Hank Leber',
                 credential: 'CEO & Co-Founder GonnaBe',
                 type: 'quote',
-                priority: 1,
+                priority: 8,
                 template: 'templates/quote.html'
             },
             {
